@@ -1,0 +1,18 @@
+{% extends "homebase.html" %}
+
+{% block title %} Arama Sayfası {% endblock %}
+{% block keywords %} Index Sayfası anahtar kelimeler {% endblock  %}
+{% block description %} Index Sayfası açıklama {% endblock %}
+
+{% block head %}
+        <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+{% endblock %}
+
+
+{% block sidebar %}
+     {% include "sidebar.html" %}
+{% endblock %}
+
+{% block content %}
+     {% include "singleEvContent.html" %}
+{% endblock %}

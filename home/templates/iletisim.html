@@ -1,0 +1,18 @@
+{% extends "homebase.html" %}
+
+{% block title %} İletisim Sayfası {% endblock %}
+{% block keywords %} İletisim Sayfası anahtar kelimeler {% endblock  %}
+{% block description %} İletisim Sayfası açıklama {% endblock %}
+
+{% block head %}
+        <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+{% endblock %}
+
+{% block baslik %}
+     {% include "baslik.html" %}
+{% block link %} iletisim {% endblock %}
+{% endblock %}
+
+{% block content %}
+     {% include "iletisimContent.html" %}
+{% endblock %}
