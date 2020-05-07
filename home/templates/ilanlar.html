@@ -1,8 +1,8 @@
 {% extends "homebase.html" %}
 
-{% block title %} Arama Sayfası {% endblock %}
-{% block keywords %} Index Sayfası anahtar kelimeler {% endblock  %}
-{% block description %} Index Sayfası açıklama {% endblock %}
+{% block title %} {{categorydata.title}} {% endblock %}
+{% block keywords %} {{categorydata.keywords}} {% endblock  %}
+{% block description %} {{ categorydata.description }} {% endblock %}
 
 {% block head %}
         <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
@@ -13,5 +13,49 @@
 {% endblock %}
 
 {% block content %}
-     {% include "ilanlarContent.html" %}
+{% load static %}
+
+					<div class="col-lg-9">
+                     <h2><a href="/category/{{ categorydata.slug }}/{{ categorydata.id }}">{{ categorydata.title }}</a></h2>
+		        <div class="row">
+
+                <!-- İlanların Çekilmesi -->
+                    {% for rs in houses %}
+		    			<div class="col-md-6 col-lg-4 ftco-animate">
+		    				<div class="project">
+		    					<div class="img">
+				    				<img src="{{ rs.image.url    }}" class="img-fluid" alt="Colorlib Template">
+				    				<div class="text">
+				    					<span>Sale</span>
+				    					<h3><a href="/houses/{{rs.slug}}/{{ rs.id }}">{{ rs.title }}</a></h3>
+				    				</div>
+			    				</div>
+			    				<div class="desc pt-3">
+			    					<h4 class="price">{{rs.price}}</h4>
+										<p class="h-info"><span class="location">{{ rs.location }}</span> <span class="details">&mdash; 3bds, 2bath</span></p>
+			    				</div>
+		    				</div>
+		    			</div>
+                    {% endfor %}
+
+		    		</div>
+		    		<div class="row no-gutters my-5">
+		          <div class="col text-center">
+		            <div class="block-27">
+		              <ul>
+		                <li><a href="#">&lt;</a></li>
+		                <li class="active"><span>1</span></li>
+		                <li><a href="#">2</a></li>
+		                <li><a href="#">3</a></li>
+		                <li><a href="#">4</a></li>
+		                <li><a href="#">5</a></li>
+		                <li><a href="#">&gt;</a></li>
+		              </ul>
+		            </div>
+		          </div>
+		        </div>
+		    	</div>
+	    	</div>
+			</div>
+		</section>
 {% endblock %}

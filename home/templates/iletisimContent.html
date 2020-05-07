@@ -1,4 +1,4 @@
-{% load static %}
+{% load static  %}
 <section class="hero-wrap hero-wrap-2" style="background-image: url('{% static 'images/bg_4.jpg'%}');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
@@ -10,6 +10,7 @@
         </div>
       </div>
     </section>
+
 <section class="ftco-section contact-section">
       <div class="container">
         <div class="row d-flex contact-info">
@@ -45,18 +46,30 @@
 			<div class="container">
 				<div class="row d-flex align-items-stretch no-gutters">
 					<div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
-						<form action="#">
+						 {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" rpşe="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+                        <!- İletisim Formu Gönderme Bölümü -!>
+    <form action="" method ="post">
+        {% csrf_token %}
+
+
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" class="form-control" placeholder="Your Name" name="name" id="id_name">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="text" class="form-control" placeholder="Your Email" name="email" id="id_email">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" class="form-control" placeholder="Subject" name="subject" id="id_subject">
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="message" id="id_message" cols="30" rows="7" class="form-control"  placeholder="Message"  ></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">

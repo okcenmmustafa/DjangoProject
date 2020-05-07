@@ -1,8 +1,8 @@
 {% extends "homebase.html" %}
 
-{% block title %} Arama Sayfası {% endblock %}
-{% block keywords %} Index Sayfası anahtar kelimeler {% endblock  %}
-{% block description %} Index Sayfası açıklama {% endblock %}
+{% block title %} {{ house.title }} {% endblock %}
+{% block keywords %} {{house.keywords}} {% endblock  %}
+{% block description %} {{house.description}} {% endblock %}
 
 {% block head %}
         <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
@@ -14,5 +14,99 @@
 {% endblock %}
 
 {% block content %}
-     {% include "singleEvContent.html" %}
+   {% load static %}
+<div class="col-md-9 properties-single">
+<h2><a href="/category/{{ house.category.slug }}/{{ house.category.id }}">{{ house.category }}<a href="/houses/{{ house.slug }}/{{ house.id }}">/{{ house.title }}</a></h2>
+
+      			<div class="single-slider owl-carousel">
+
+      				<div class="item">
+      					<div class="properties-img" style="background-image: url({{ house.image.url }});"></div>
+      				</div>
+                    {% for rs in images %}
+      				<div class="item">
+      					<div class="properties-img" style="background-image: url({{ rs.image.url }});"></div>
+      				</div>
+                    {% endfor %}
+
+      			</div>
+        		<div class="col-md-12 Properties-single mt-4 mb-5 ftco-animate">
+                    <div class="row" ">
+                      <div class="col-sm-6" style="padding-top: 80px;" ><h2 >{{house.title}}</h2></div>
+                      <div class="col-sm-3" style="padding: 70px 0; text-align: center;"><h1 style="color:green"> {{ house.price }} ₺</h1></div>
+
+                    </div>
+        			<p class="rate mb-4">
+        				<span class="loc"><a href="#"><i class="icon-map"></i> {{ house.location }}</a></span>
+  						</p>
+
+  						<div class="d-md-flex mt-5 mb-5">
+  							<ul>
+    							<li><span>Lot Area: </span> 1,250 SQ FT</li>
+    							<li><span>Bed Rooms: </span> 4</li>
+    							<li><span>Bath Rooms: </span> 4</li>
+    							<li><span>Garage: </span> 1</li>
+    						</ul>
+    						<ul class="ml-md-5">
+    							<li><span>Floor Area: </span> 1,300 SQ FT</li>
+    							<li><span>Year Build:: </span> 2018</li>
+    							<li><span>Stories: </span> 1</li>
+    							<li><span>Roofing: </span> New</li>
+    						</ul>
+  						</div>
+  						<p>{{ house.description }}</p>
+        		</div>
+        		<div class="col-md-12 properties-single ftco-animate mb-5 mt-4">
+        			<h3 class="mb-4">Take A Tour</h3>
+        			<div class="block-16">
+	              <figure>
+	                <img src="{% static 'images/image_2.jpg'%}"" alt="Image placeholder" class="img-fluid">
+	                <a href="https://vimeo.com/45830194" class="play-button popup-vimeo"><span class="icon-play"></span></a>
+	              </figure>
+	            </div>
+        		</div>
+
+        		<div class="col-md-12 properties-single ftco-animate mb-5 mt-4">
+        			<h4 class="mb-4">Review &amp; Ratings</h4>
+        			<div class="row">
+        				<div class="col-md-6">
+        					<form method="post" class="star-rating">
+									  <div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+											<label class="form-check-label" for="exampleCheck1">
+												<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i> 100 Ratings</span></p>
+											</label>
+									  </div>
+									  <div class="form-check">
+								      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+								      <label class="form-check-label" for="exampleCheck1">
+								    	   <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i> 30 Ratings</span></p>
+								      </label>
+									  </div>
+									  <div class="form-check">
+								      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+								      <label class="form-check-label" for="exampleCheck1">
+								      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 5 Ratings</span></p>
+								     </label>
+									  </div>
+									  <div class="form-check">
+									    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+								      <label class="form-check-label" for="exampleCheck1">
+								      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 0 Ratings</span></p>
+								      </label>
+									  </div>
+									  <div class="form-check">
+								      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+								      <label class="form-check-label" for="exampleCheck1">
+								      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 0 Ratings</span></p>
+									    </label>
+									  </div>
+									</form>
+        				</div>
+        			</div>
+        		</div>
+		    	</div>
+	    	</div>
+			</div>
+		</section>
 {% endblock %}

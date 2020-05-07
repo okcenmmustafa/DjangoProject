@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24289d0d-142c-4a21-9b2b-fb07fa858063" name="Default Changelist" comment="" />
+    <list default="true" id="24289d0d-142c-4a21-9b2b-fb07fa858063" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/homeSearch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson1/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson1/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/ilanlar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/ilanlar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/ilanlarContent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/iletisim.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/iletisim.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/iletisimContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/iletisimContent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/singleEvContent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/singleEvDetay.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/singleEvDetay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/models.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,22 +40,28 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1YoT3JzSF0YUPIks8sfTgeNhqZQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/house" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -39,10 +72,55 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Django\Lesson1\home\templates" />
       <recent name="C:\Django\Lesson1\house" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.tkintercalisma">
+    <configuration name="tkinter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lesson1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/Python" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/Python/tkinter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tkintercalisma" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lesson1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/Python" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/Python/tkintercalisma.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Lesson1" type="Python.DjangoServer" factoryName="Django server">
       <module name="Lesson1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -66,6 +144,12 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.tkintercalisma" />
+        <item itemvalue="Python.tkinter" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -84,6 +168,12 @@
       <workItem from="1585525381029" duration="901000" />
       <workItem from="1585529644170" duration="5146000" />
       <workItem from="1585577723354" duration="14139000" />
+      <workItem from="1587399037089" duration="1048000" />
+      <workItem from="1587423458943" duration="886000" />
+      <workItem from="1587425341666" duration="471000" />
+      <workItem from="1587478134019" duration="2561000" />
+      <workItem from="1588612618899" duration="17227000" />
+      <workItem from="1588694868770" duration="31578000" />
     </task>
     <servers />
   </component>
@@ -91,22 +181,58 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="0" y="59" key="#Inspections" timestamp="1588648588478">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="59" key="#Inspections/0.0.1920.1080@0.0.1920.1080" timestamp="1588648588478" />
     <state x="565" y="166" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585582712892">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="565" y="166" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1585582712892" />
-    <state x="639" y="178" key="FileChooserDialogImpl" timestamp="1583608645967">
+    <state x="639" y="178" key="FileChooserDialogImpl" timestamp="1587425363382">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="639" y="178" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1583608645967" />
+    <state x="639" y="178" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1587425363382" />
+    <state width="1836" height="262" key="GridCell.Tab.0.bottom" timestamp="1587425812900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587425812900" />
+    <state width="1836" height="262" key="GridCell.Tab.0.center" timestamp="1587425812900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="262" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587425812900" />
+    <state width="1836" height="262" key="GridCell.Tab.0.left" timestamp="1587425812900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="262" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587425812900" />
+    <state width="1836" height="262" key="GridCell.Tab.0.right" timestamp="1587425812900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="262" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587425812900" />
+    <state width="1836" height="327" key="GridCell.Tab.1.bottom" timestamp="1587424348812">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="327" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587424348812" />
+    <state width="1836" height="327" key="GridCell.Tab.1.center" timestamp="1587424348812">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="327" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587424348812" />
+    <state width="1836" height="327" key="GridCell.Tab.1.left" timestamp="1587424348812">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="327" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587424348812" />
+    <state width="1836" height="327" key="GridCell.Tab.1.right" timestamp="1587424348812">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="327" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587424348812" />
     <state x="221" y="9" key="SettingsEditor" timestamp="1583608692667">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="221" y="9" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1583608692667" />
-    <state x="506" y="278" key="com.intellij.ide.util.TipDialog" timestamp="1585577742372">
+    <state x="506" y="278" key="com.intellij.ide.util.TipDialog" timestamp="1588694917063">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="506" y="278" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1585577742372" />
+    <state x="506" y="278" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1588694917063" />
     <state x="0" y="0" width="920" height="1080" key="find.popup" timestamp="1585514016982">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -115,5 +241,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="453" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1585581320415" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lesson1$tkintercalisma.coverage" NAME="tkintercalisma Coverage Results" MODIFIED="1587425434151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/Python" />
+    <SUITE FILE_PATH="coverage/Lesson1$tkinter.coverage" NAME="tkinter Coverage Results" MODIFIED="1587424134294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/Python" />
   </component>
 </project>

@@ -1,8 +1,32 @@
 {% load static %}
+
+
+
+
+
 <section class="ftco-section">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-3">
+                        <ul>
+                              {% load mptt_tags %}
+
+                                    {% recursetree category %}
+
+                                        <a href="/category/{{ node.slug }}/{{ node.id }}"><li style="color: #0b0b0b">
+                                           {{ node.title }}
+                                            {% if not node.is_leaf_node %}
+                                                <ul>
+
+                                                    {{ children }}
+                                                </li>
+                                                </ul>
+                                            {% endif %}
+                                        </li></a>
+
+                                    {% endrecursetree %}
+
+                            </ul>
 							<div class="search-wrap">
 								<h3>Advance Search</h3>
 								<form action="#" class="search-property">

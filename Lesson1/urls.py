@@ -18,11 +18,17 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+from home import views
+
 urlpatterns = [
     path('',include('home.urls')),
-    path('house/', include('house.urls')),
+    path('hakkimizda/',views.hakkimizda,name='hakkimizda'),
+    path('category/<slug:slug>/<int:id>/',views.category_ilanlar,name='category_ilanlar'),
+    path('houses/<slug:slug>/<int:id>/',views.UrunSayfasi,name='UrunSayfasi'),
+    path('search/',views.house_search,name='house_search'),
     path('home/', include('home.urls')),
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 if settings.DEBUG:
     urlpatterns +=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
