@@ -4,15 +4,66 @@
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
+<style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	        	<li class="nav-item active"><a href="/" class="nav-link">Anasayfa</a></li>
 	        	<li class="nav-item"><a href="/ilanlar" class="nav-link">İlanlar</a></li>
 	          <li class="nav-item"><a href="/iletisim" class="nav-link">İletişim</a></li>
 	          <li class="nav-item"><a href="/hakkimizda" class="nav-link">Hakkımızda</a></li>
-	          <li class="nav-item cta"><a href="#" class="nav-link"><span>Üye Ol</span></a></li>
-	        </ul>
+
+                {% if user.id is  not None %}
+                   <div class="dropdown" style="margin:auto; height:%50">
+                      <button class="dropbtn">{{user.first_name}} {{ user.last_name }}</button>
+                      <div class="dropdown-content">
+                        <a href="#">Favoriler</a>
+                        <a href="#">Ayarlar</a>
+                        <a href="/logout/">Çıkış</a>
+                      </div>
+                    </div>
+                {% else %}
+              <ul style="opacity: .5;list-style-type: none;margin: auto;height:50%;align-items: center;display: flex" >
+	          <li class="nav-item cta"><a href="/login/" class="nav-link" ><span>Giris Yap</span></a></li>
+	          <li class="nav-item cta"><a href="/join/" class="nav-link" ><span>Üye Ol</span></a></li>
+              </ul>
+                {% endif %}
+
+            </ul>
 	      </div>
 	    </div>
 	  </nav>

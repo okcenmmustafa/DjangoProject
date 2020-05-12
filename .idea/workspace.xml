@@ -2,29 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24289d0d-142c-4a21-9b2b-fb07fa858063" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/homeSearch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson1/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson1/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/ilanlar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/ilanlar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/ilanlarContent.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/iletisim.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/iletisim.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/iletisimContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/iletisimContent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/singleEvContent.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/singleEvDetay.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/singleEvDetay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/iletisimContent.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/house/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/house/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/models.py" afterDir="false" />
@@ -174,6 +163,9 @@
       <workItem from="1587478134019" duration="2561000" />
       <workItem from="1588612618899" duration="17227000" />
       <workItem from="1588694868770" duration="31578000" />
+      <workItem from="1589135545205" duration="13249000" />
+      <workItem from="1589206054381" duration="5307000" />
+      <workItem from="1589298151075" duration="1135000" />
     </task>
     <servers />
   </component>
@@ -229,10 +221,14 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="221" y="9" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1583608692667" />
-    <state x="506" y="278" key="com.intellij.ide.util.TipDialog" timestamp="1588694917063">
+    <state x="506" y="278" key="com.intellij.ide.util.TipDialog" timestamp="1589298205884">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="506" y="278" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1588694917063" />
+    <state x="506" y="278" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589298205884" />
+    <state x="678" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589299824993">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="678" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1589299824993" />
     <state x="0" y="0" width="920" height="1080" key="find.popup" timestamp="1585514016982">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

@@ -1,5 +1,8 @@
+import json
 
 from django.contrib import messages
+from django.contrib.auth import logout , authenticate , login
+
 from django.db.models import QuerySet
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -91,9 +94,61 @@ def house_search(request):
         if form.is_valid():
             category=Category.objects.all()
             query=form.cleaned_data['query']
-            houses=House.objects.filter(location__icontains=query)
+            catid=form.cleaned_data['catid']
+            if catid==0:
+                houses=House.objects.filter(title__icontains=query)
+            else:
+                houses = House.objects.filter(location__icontains=query,category_id=catid)
+
 
             context ={'houses':houses,
                       'category':category,
             }
             return render(request,'homeSearch.html',context)
+
+def house_search_auto(request):
+  if request.is_ajax():
+    q = request.GET.get('term', '')
+    house = House.objects.filter(location__icontains=q)
+    results = []
+    for rs in house:
+      house_json = {}
+      house_json = rs.location
+      results.append(house_json)
+    data = json.dumps(results)
+  else:
+    data = 'fail'
+  mimetype = 'application/json'
+  return HttpResponse(data, mimetype)
+
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect('/')
+
+def login_view(request):
+    if request.method=='POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request , username=username , password=password)
+        if user is not None:
+            login(request , user)
+            return HttpResponseRedirect('/')
+        else:
+            messages.warning(request, "Kullanıcı adı veya şifre yanlış!")
+            return HttpResponseRedirect('/login')
+
+    category = Category.objects.all()
+    context = {
+               'category': category ,
+               }
+    return render(request , 'login.html' , context)
+
+def signup_view(request):
+    if request.method=='POST':
+            return HttpResponse("Sign Up")
+
+    category = Category.objects.all()
+    context = {
+        'category': category ,
+    }
+    return render(request , 'signup.html' , context)

@@ -1,6 +1,32 @@
  {% load static %}
 <section class="home-slider owl-carousel">
 
+
+
+
+<!-- Jquerry ile arama tamamlanması -->
+<script>
+
+  $(function() {
+    $("#query").autocomplete({
+      source: "/search_auto/",
+      select: function (event, ui) { //item selected
+        AutoCompleteSelectHandler(event, ui)
+      },
+      minLength: 2,
+    });
+  });
+
+  function AutoCompleteSelectHandler(event, ui)
+  {
+    var selectedObj = ui.item;
+  }
+
+</script>
+
+
+
+
             <!-- Slider Bolumu -->
 
     {% for rs in sliderdata %}
@@ -59,7 +85,7 @@
 		          				<div class="form-field">
 		          					<div class="icon"><span class="ion-ios-search"></span></div>
                                     {% csrf_token %}
-				                <input name="query" type="text" class="form-control" placeholder="City/Locality Name">
+				                <input id="query" name="query" type="text" class="form-control" placeholder="City/Locality Name">
 				              </div>
 			              </div>
 		        			</div>
@@ -69,25 +95,25 @@
 		        					<div class="form-field">
 		          					<div class="select-wrap">
 		                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-		                      <select name="" id="" class="form-control" >
+
 
 
                               <!-- Kategoriler Çekiliyor -->
 
                                 {% load mptt_tags %}
-
+                                 <select name="catid" id="catid" class="form-control" >
+                                 <option value="0" style="color: #0b0b0b">All Caegories</option>
                                     {% recursetree category %}
 
-                                        <option style="color: #0b0b0b">
-                                           {{ node.title }}
-                                            {% if not node.is_leaf_node %}
-                                                <li class="children">
-                                                    {{ children }}
-                                                </li>
-                                            {% endif %}
-                                        </option>
+                                        {% if node.is_leaf_node %} <option value="{{ node.id }}" style="color: #0b0b0b">{{ node.title }}</option> {% endif %}
+                                        {% if not node.is_leaf_node %}
+                                                <optgroup label="{{ node.title }}" style="color: #0b0b0b">
+                                                {{ children }}
 
+                                                </optgroup>
+                                        {% endif %}
                                     {% endrecursetree %}
+
 		                      </select>
 		                    </div>
 				              </div>
@@ -100,8 +126,13 @@
 		          					<div class="select-wrap">
 		                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 		                      <select name="" id="" class="form-control">
-		                      	<option value="">Type</option>
-		                        <option value="">Rent</option>
+		                      	{% for org in category %}
+                                   <option value="{{org.title}}"
+                                       {% if org == current_org %}selected="selected"{% endif %}>
+                                       {{org.title|capfirst}}
+                                   </option>
+                                {% endfor %}
+		                        <option value="" selected="selected">Rent</option>
 		                        <option value="">Sale</option>
 		                      </select>
 		                    </div>
