@@ -1,17 +1,17 @@
 {% extends "homebase.html" %}
 
 {% block title %}Hakkımızda - {{ setting.company }} {% endblock %}
-{% block keywords %} {{ setting.keywords }}  {% endblock  %}
+{% block keywords %} {{ setting.keywords }}  {% endblock %}
 {% block description %} {{ setting.description }}  {% endblock %}
 
 {% block head %}
-        <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
 {% endblock %}
 
 
 {% block body %}
     <div>
-    {{ setting.aboutus |safe }}
+        {{ setting.aboutus |safe }}
     </div>
 
 

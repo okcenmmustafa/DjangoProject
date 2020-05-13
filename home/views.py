@@ -11,7 +11,7 @@ from django.shortcuts import render
 from django.template import context
 
 import house
-from home.forms import SearchForm
+from home.forms import SearchForm , SignUpForm
 from home.models import Setting, ContactFormMessage, ContactFormu
 from house.models import House , Category , Images
 
@@ -145,10 +145,18 @@ def login_view(request):
 
 def signup_view(request):
     if request.method=='POST':
-            return HttpResponse("Sign Up")
-
+        form=SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = request.POST['username']
+            password = request.POST['password1']
+            user = authenticate(request , username=username , password=password)
+            login(request,user)
+            return HttpResponseRedirect('/')
+    form = SignUpForm()
     category = Category.objects.all()
     context = {
         'category': category ,
+        'form' : form,
     }
     return render(request , 'signup.html' , context)

@@ -1,27 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24289d0d-142c-4a21-9b2b-fb07fa858063" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/signup.html" afterDir="false" />
+    <list default="true" id="24289d0d-142c-4a21-9b2b-fb07fa858063" name="Default Changelist" comment="Üye giriş ve kayıt saflarının eklenmesi">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson1/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson1/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/hakkimizda.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/hakkimizda.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/homeSearch.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homeSearch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/iletisim.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/iletisim.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/iletisimContent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/singleEvDetay.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/singleEvDetay.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default2" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default2" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default2" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default2" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="auth_user: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -29,8 +77,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -50,7 +98,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/user" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -61,11 +109,32 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Django\Lesson1\user" />
       <recent name="C:\Django\Lesson1\home\templates" />
       <recent name="C:\Django\Lesson1\house" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.tkintercalisma">
+  <component name="RunManager" selected="Django tests.Test: user">
+    <configuration name="Test: user" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Lesson1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="user" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="tkinter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lesson1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,6 +204,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Django tests.Test: user" />
         <item itemvalue="Python.tkintercalisma" />
         <item itemvalue="Python.tkinter" />
       </list>
@@ -165,42 +235,63 @@
       <workItem from="1588694868770" duration="31578000" />
       <workItem from="1589135545205" duration="13249000" />
       <workItem from="1589206054381" duration="5307000" />
-      <workItem from="1589298151075" duration="1135000" />
+      <workItem from="1589298151075" duration="7750000" />
+      <workItem from="1589325138923" duration="10174000" />
     </task>
+    <task id="LOCAL-00001" summary="Üye giriş ve kayıt saflarının eklenmesi">
+      <created>1589299857888</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589299857888</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Üye giriş ve kayıt saflarının eklenmesi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Üye giriş ve kayıt saflarının eklenmesi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="59" key="#Inspections" timestamp="1588648588478">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="59" key="#Inspections/0.0.1920.1080@0.0.1920.1080" timestamp="1588648588478" />
+    <state x="539" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589325324910">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="539" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589325324910" />
     <state x="565" y="166" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585582712892">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="565" y="166" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1585582712892" />
+    <state x="408" y="0" key="CommitChangelistDialog2" timestamp="1589300162273">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="408" y="0" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1589300162273" />
     <state x="639" y="178" key="FileChooserDialogImpl" timestamp="1587425363382">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="639" y="178" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1587425363382" />
-    <state width="1836" height="262" key="GridCell.Tab.0.bottom" timestamp="1587425812900">
+    <state width="1853" height="264" key="GridCell.Tab.0.bottom" timestamp="1589339611313">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1836" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587425812900" />
-    <state width="1836" height="262" key="GridCell.Tab.0.center" timestamp="1587425812900">
+    <state width="1853" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1589339611313" />
+    <state width="1853" height="264" key="GridCell.Tab.0.center" timestamp="1589339611312">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1836" height="262" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587425812900" />
-    <state width="1836" height="262" key="GridCell.Tab.0.left" timestamp="1587425812900">
+    <state width="1853" height="264" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1589339611312" />
+    <state width="1853" height="264" key="GridCell.Tab.0.left" timestamp="1589339611312">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1836" height="262" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587425812900" />
-    <state width="1836" height="262" key="GridCell.Tab.0.right" timestamp="1587425812900">
+    <state width="1853" height="264" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1589339611312" />
+    <state width="1853" height="264" key="GridCell.Tab.0.right" timestamp="1589339611313">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1836" height="262" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587425812900" />
+    <state width="1853" height="264" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1589339611313" />
     <state width="1836" height="327" key="GridCell.Tab.1.bottom" timestamp="1587424348812">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -217,29 +308,38 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1836" height="327" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587424348812" />
+    <state width="311" height="751" key="HiddenNamespacesPopup" timestamp="1589325297122">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="311" height="751" key="HiddenNamespacesPopup/0.0.1920.1080@0.0.1920.1080" timestamp="1589325297122" />
     <state x="221" y="9" key="SettingsEditor" timestamp="1583608692667">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="221" y="9" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1583608692667" />
-    <state x="506" y="278" key="com.intellij.ide.util.TipDialog" timestamp="1589298205884">
+    <state x="506" y="278" key="com.intellij.ide.util.TipDialog" timestamp="1589339767004">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="506" y="278" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589298205884" />
-    <state x="678" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589299824993">
+    <state x="506" y="278" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589339767004" />
+    <state x="678" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589300685521">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="678" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1589299824993" />
+    <state x="678" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1589300685521" />
     <state x="0" y="0" width="920" height="1080" key="find.popup" timestamp="1585514016982">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" width="920" height="1080" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1585514016982" />
-    <state x="453" y="-2" width="1009" height="1470" key="search.everywhere.popup" timestamp="1585581320415">
+    <state x="425" y="132" width="1050" height="795" key="recent.locations.popup" timestamp="1589300716436">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="453" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1585581320415" />
+    <state x="425" y="132" width="1050" height="795" key="recent.locations.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1589300716436" />
+    <state x="453" y="-2" width="1009" height="1470" key="search.everywhere.popup" timestamp="1589300700942">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="453" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1589300700942" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Lesson1$tkintercalisma.coverage" NAME="tkintercalisma Coverage Results" MODIFIED="1587425434151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/Python" />
     <SUITE FILE_PATH="coverage/Lesson1$tkinter.coverage" NAME="tkinter Coverage Results" MODIFIED="1587424134294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/Python" />
+    <SUITE FILE_PATH="coverage/Lesson1$Test__user.coverage" NAME="Test: user Coverage Results" MODIFIED="1589333349558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

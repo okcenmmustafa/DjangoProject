@@ -1,0 +1,78 @@
+{% extends "homebase.html" %}
+
+{% block title %} İletisim Sayfası {% endblock %}
+{% block keywords %} İletisim Sayfası anahtar kelimeler {% endblock %}
+{% block description %} İletisim Sayfası açıklama {% endblock %}
+
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
+{% endblock %}
+
+{% block baslik %}
+    {% include "baslik.html" %}
+    {% block link %} iletisim {% endblock %}
+{% endblock %}
+
+{% block body %}
+    {% load static %}
+<style>
+th{
+    padding: 30px;
+    padding-right: 100px;
+    text-align:center;
+}
+td{
+    text-align: center;
+    padding: 30px;
+}
+</style>
+    <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
+        <div class="container">
+            <div class="row d-flex align-items-stretch no-gutters">
+                <div class="col-md-4 p-4 p-md-5 order-md-last bg-light">
+                    {% include 'user_panel.html' %}
+                </div>
+                <div class="col-md-8 p-4 p-md-5 order-md-last bg-light">
+                    <h1>User Information</h1>
+                    <hr>
+                    <table >
+                    <tr>
+                    <th class="text-left"></th>
+                    <td ><img class="icon-adjust" height="300px" src="{{ profile.image.url }}" </td>
+                     </tr>
+                        <tr>
+                            <th>İsim Soyisim</th>
+                            <td style="text-align: center">{{ profile.user.first_name }} {{ profile.user.last_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td>{{ profile.user.email }}</td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <th>Telefon</th>
+                            <td>{{ profile.phone }}</td>
+                        </tr>
+                        <tr>
+                            <th>Adres</th>
+                            <td>{{ profile.adress }}</td>
+                        </tr>
+                        <tr>
+                            <th>Şehir</th>
+                            <td>{{ profile.city }}</td>
+                        </tr>
+                        <tr>
+                            <th>Ülke</th>
+                            <td>{{ profile.country }}</td>
+                        </tr>
+
+                        </table>
+                </div>
+
+                </div>
+            </div>
+    <6*
+
+    </section>
+
+{% endblock %}

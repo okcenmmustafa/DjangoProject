@@ -1,11 +1,11 @@
 {% extends "homebase.html" %}
 
 {% block title %} {{ setting.title }} {% endblock %}
-{% block keywords %} {{ setting.keywords }}  {% endblock  %}
+{% block keywords %} {{ setting.keywords }}  {% endblock %}
 {% block description %} {{ setting.description }}  {% endblock %}
 
 {% block head %}
-        <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
 {% endblock %}
 
 {% block slider %}
@@ -13,99 +13,109 @@
 {% endblock %}
 
 {% block body %}
-     {% load static %}
-<section class="ftco-section ftco-no-pb">
-			<div class="container">
-				<div class="row justify-content-start mb-5">
-          <div class="col-md-8 heading-section ftco-animate">
-            <h2 class="mb-4">Yeni Eklenenler</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-          </div>
-        </div>
-        <div class="row">
-        	<div class="col-md-12">
-            <div class="carousel-properties owl-carousel">
-            	{% for rs in yeniEklenenler %}
-                <div class="item">
-            		<div class="project">
-		    					<div class="img">
-				    				<img src="{{rs.image.url}}" class="img-fluid" alt="Colorlib Template" style="height: 380px">
-				    				<div class="text">
-				    					<span>Sale</span>
-				    					<h3><a href="/houses/{{rs.slug}}/{{ rs.id }}">{{rs.title}}</a></h3>
-				    				</div>
-			    				</div>
-			    				<div class="desc pt-3">
-			    					<h4 class="price">$120,000</h4>
-										<p class="h-info"><span class="location">{{ rs.location }}</span> <span class="details">&mdash; 3bds, 2bath</span></p>
-			    				</div>
-		    				</div>
-            	</div>
-                {% endfor %}
-            	<div class="item">
-            		<div class="project">
-		    					<div class="img">
-				    				<img src="{% static 'images/work-2.jpg'%}" class="img-fluid" alt="Colorlib Template">
-				    				<div class="text">
-				    					<span>Sale</span>
-				    					<h3><a href="ilanlar.html">Fatima <br> Subdivision</a></h3>
-				    				</div>
-			    				</div>
-			    				<div class="desc pt-3">
-			    					<h4 class="price">$120,000</h4>
-										<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
-			    				</div>
-		    				</div>
-            	</div>
-            	<div class="item">
-            		<div class="project">
-		    					<div class="img">
-				    				<img src="{% static 'images/work-3.jpg'%}" class="img-fluid" alt="Colorlib Template">
-				    				<div class="text">
-				    					<span>Sale</span>
-				    					<h3><a href="ilanlar.html">Fatima <br> Subdivision</a></h3>
-				    				</div>
-			    				</div>
-			    				<div class="desc pt-3">
-			    					<h4 class="price">$120,000</h4>
-										<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
-			    				</div>
-		    				</div>
-            	</div>
-            	<div class="item">
-            		<div class="project">
-		    					<div class="img">
-				    				<img src="{% static 'images/work-4.jpg'%}" class="img-fluid" alt="Colorlib Template">
-				    				<div class="text">
-				    					<span>Sale</span>
-				    					<h3><a href="ilanlar.html">Fatima <br> Subdivision</a></h3>
-				    				</div>
-			    				</div>
-			    				<div class="desc pt-3">
-			    					<h4 class="price">$120,000</h4>
-										<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
-			    				</div>
-		    				</div>
-            	</div>
-            	<div class="item">
-            		<div class="project">
-		    					<div class="img">
-				    				<img src="{% static 'images/work-5.jpg'%}" class="img-fluid" alt="Colorlib Template">
-				    				<div class="text">
-				    					<span>Sale</span>
-				    					<h3><a href="ilanlar.html">Fatima <br> Subdivision</a></h3>
-				    				</div>
-			    				</div>
-			    				<div class="desc pt-3">
-			    					<h4 class="price">$120,000</h4>
-										<p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span></p>
-			    				</div>
-		    				</div>
-            	</div>
+    {% load static %}
+    <section class="ftco-section ftco-no-pb">
+        <div class="container">
+            <div class="row justify-content-start mb-5">
+                <div class="col-md-8 heading-section ftco-animate">
+                    <h2 class="mb-4">Yeni Eklenenler</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                </div>
             </div>
-        </div>
-			</div>
-		</section>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carousel-properties owl-carousel">
+                        {% for rs in yeniEklenenler %}
+                            <div class="item">
+                                <div class="project">
+                                    <div class="img">
+                                        <img src="{{ rs.image.url }}" class="img-fluid" alt="Colorlib Template"
+                                             style="height: 380px">
+                                        <div class="text">
+                                            <span>Sale</span>
+                                            <h3><a href="/houses/{{ rs.slug }}/{{ rs.id }}">{{ rs.title }}</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="desc pt-3">
+                                        <h4 class="price">$120,000</h4>
+                                        <p class="h-info"><span class="location">{{ rs.location }}</span> <span
+                                                class="details">&mdash; 3bds, 2bath</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="item">
+                            <div class="project">
+                                <div class="img">
+                                    <img src="{% static 'images/work-2.jpg' %}" class="img-fluid"
+                                         alt="Colorlib Template">
+                                    <div class="text">
+                                        <span>Sale</span>
+                                        <h3><a href="ilanlar.html">Fatima <br> Subdivision</a></h3>
+                                    </div>
+                                </div>
+                                <div class="desc pt-3">
+                                    <h4 class="price">$120,000</h4>
+                                    <p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="project">
+                                <div class="img">
+                                    <img src="{% static 'images/work-3.jpg' %}" class="img-fluid"
+                                         alt="Colorlib Template">
+                                    <div class="text">
+                                        <span>Sale</span>
+                                        <h3><a href="ilanlar.html">Fatima <br> Subdivision</a></h3>
+                                    </div>
+                                </div>
+                                <div class="desc pt-3">
+                                    <h4 class="price">$120,000</h4>
+                                    <p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="project">
+                                <div class="img">
+                                    <img src="{% static 'images/work-4.jpg' %}" class="img-fluid"
+                                         alt="Colorlib Template">
+                                    <div class="text">
+                                        <span>Sale</span>
+                                        <h3><a href="ilanlar.html">Fatima <br> Subdivision</a></h3>
+                                    </div>
+                                </div>
+                                <div class="desc pt-3">
+                                    <h4 class="price">$120,000</h4>
+                                    <p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="project">
+                                <div class="img">
+                                    <img src="{% static 'images/work-5.jpg' %}" class="img-fluid"
+                                         alt="Colorlib Template">
+                                    <div class="text">
+                                        <span>Sale</span>
+                                        <h3><a href="ilanlar.html">Fatima <br> Subdivision</a></h3>
+                                    </div>
+                                </div>
+                                <div class="desc pt-3">
+                                    <h4 class="price">$120,000</h4>
+                                    <p class="h-info"><span class="location">New York</span> <span class="details">&mdash; 3bds, 2bath</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
 
 
 {% endblock %}

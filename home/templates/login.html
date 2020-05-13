@@ -1,51 +1,51 @@
 {% extends "homebase.html" %}
 
 {% block title %} Login {% endblock %}
-{% block keywords %} İletisim Sayfası anahtar kelimeler {% endblock  %}
+{% block keywords %} İletisim Sayfası anahtar kelimeler {% endblock %}
 {% block description %} İletisim Sayfası açıklama {% endblock %}
 
 {% block head %}
-        <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
 {% endblock %}
 
 {% block baslik %}
-     {% include "baslik.html" %}
-{% block link %} iletisim {% endblock %}
+    {% include "baslik.html" %}
+    {% block link %} iletisim {% endblock %}
 {% endblock %}
 
 {% block body %}
-     {% load static  %}
+    {% load static %}
 
 
-                        <!- Login Formu Gönderme Bölümü -!>
+    <!- Login Formu Gönderme Bölümü -!>
     <div class="row" style="margin:100px;">
-    <div style=" margin: auto;width: 50%;">
-    <h1>User Login</h1>
-        	 {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}" rpşe="alert">
-                {{ message }}
-            </div>
-        {% endfor %}
-    {% endif %}
-    <form action="" method ="post" >
-        {% csrf_token %}
+        <div style=" margin: auto;width: 50%;">
+            <h1>User Login</h1>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}" rpşe="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <form action="" method="post">
+                {% csrf_token %}
 
 
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Username" name="username" id="username">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" name="password" id="password">
-              </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Username" name="username" id="username">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" name="password" id="password">
+                </div>
 
-              <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-primary py-3 px-5">
-              </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-primary py-3 px-5">
+                </div>
             </form>
 
-			</div>
-		</section>
+        </div>
+        </section>
     </div>
     </div>
 {% endblock %}
