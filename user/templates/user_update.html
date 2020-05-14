@@ -1,0 +1,90 @@
+{% extends "homebase.html" %}
+
+{% block title %} İletisim Sayfası {% endblock %}
+{% block keywords %} İletisim Sayfası anahtar kelimeler {% endblock %}
+{% block description %} İletisim Sayfası açıklama {% endblock %}
+
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
+{% endblock %}
+
+{% block baslik %}
+    {% include "baslik.html" %}
+    {% block link %} iletisim {% endblock %}
+{% endblock %}
+
+{% block body %}
+    {% load static %}
+<style>
+th{
+    padding: 30px;
+    padding-right: 100px;
+    text-align:center;
+}
+td{
+    display: flex;
+    text-align: center;
+    padding: 30px;
+}
+.button {
+    background-color: limegreen;
+    color: white;
+    font-size: 14px;
+    padding: 14px 40px;
+    border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: black; /* Green */
+  color: white;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+#id_email {
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}#id_city {
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+</style>
+    <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
+        <div class="container">
+            <div class="row d-flex align-items-stretch no-gutters">
+                <div class="col-md-2 p-4 p-md-5 order-md-last bg-light">
+                    {% include 'user_panel.html' %}
+                </div>
+                <div class="col-md-10 p-4 p-md-5 order-md-last bg-light">
+                    <h1>User Update</h1>
+                    <hr>
+                    <div class="media">
+                    <img src="{{ user.userprofile.image.url }}" style="height: 300px;border-radius: 100px; margin: 20px 100px 30px 300px">
+                    </div>
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <fieldset class="form-group">
+                            {{ user_form.as_p }}
+                            {{ profile_form.as_p }}
+                        </fieldset>
+                        <div class="form-group">
+                            <button class="button" type="submit">Update</button>
+                        </div>
+                    </form>
+                </div>
+
+                </div>
+            </div>
+
+
+    </section>
+
+{% endblock %}

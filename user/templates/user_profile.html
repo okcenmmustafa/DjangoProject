@@ -22,22 +22,40 @@ th{
     text-align:center;
 }
 td{
+    display: flex;
     text-align: center;
     padding: 30px;
+}
+
+.button {
+    background-color: limegreen;
+    color: white;
+    font-size: 14px;
+    padding: 14px 40px;
+    border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: black; /* Green */
+  color: white;
 }
 </style>
     <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
         <div class="container">
             <div class="row d-flex align-items-stretch no-gutters">
-                <div class="col-md-4 p-4 p-md-5 order-md-last bg-light">
+                <div class="col-md-2 p-4 p-md-5 order-md-last bg-light">
                     {% include 'user_panel.html' %}
                 </div>
-                <div class="col-md-8 p-4 p-md-5 order-md-last bg-light">
+                <div class="col-md-10 p-4 p-md-5 order-md-last bg-light">
                     <h1>User Information</h1>
                     <hr>
                     <table >
                     <tr>
-                    <th class="text-left"></th>
+                    <th class="text-left">
+                        <a href="/user/update" class="button">Update Profile</a>
+                        <a href="/user/password" class="button">Change Password</a>
+                    </th>
                     <td ><img class="icon-adjust" height="300px" src="{{ profile.image.url }}" </td>
                      </tr>
                         <tr>

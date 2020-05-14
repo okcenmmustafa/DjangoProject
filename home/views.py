@@ -12,7 +12,7 @@ from django.template import context
 
 import house
 from home.forms import SearchForm , SignUpForm
-from home.models import Setting, ContactFormMessage, ContactFormu
+from home.models import Setting , ContactFormMessage , ContactFormu , UserProfile
 from house.models import House , Category , Images
 
 
@@ -152,6 +152,11 @@ def signup_view(request):
             password = request.POST['password1']
             user = authenticate(request , username=username , password=password)
             login(request,user)
+            current_user = request.user
+            data=UserProfile()
+            data.user_id=current_user.id
+            data.image='images/user.png'
+            data.save()
             return HttpResponseRedirect('/')
     form = SignUpForm()
     category = Category.objects.all()
