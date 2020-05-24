@@ -1,111 +1,380 @@
 {% load static %}
 
+<script>
+
+    $(function () {
+        $("#query").autocomplete({
+            source: "/search_auto/",
+            select: function (event, ui) { //item selected
+                AutoCompleteSelectHandler(event, ui)
+            },
+            minLength: 2,
+        });
+    });
+
+    function AutoCompleteSelectHandler(event, ui) {
+        var selectedObj = ui.item;
+    }
+
+</script>
+<style>
+    li {
+        list-style-type: none;
+    }
+
+    .responsive-menu {
+
+
+        font-size: 120%;
+    }
+
+    .responsive-menu ul li ul li {
+
+        border-bottom: solid 1px white;
+        border-top: solid 1px white;
+    }
+
+    .responsive-menu ul li ul {
+         text-align: center;
+        padding-right: 150px;
+        display: none;
+        font-size: 80%;
+
+    }
+
+    #trigger:checked + .responsive-menu ul li ul {
+        display: block;
+    }
+
+    #trigger {
+        display: none;
+    }
+
+    #trigger2 {
+        display: none;
+    }
+
+
+    #trigger2:checked + .responsive-menu ul li ul {
+        display: block;
+    }
+
+    .responsive-menu2 {
+
+        padding: 10px;
+        font-size: 200%;
+    }
+
+    .responsive-menu2 ul li ul li {
+        padding: 10px;
+
+    }
+
+    .responsive-menu2 ul li ul {
+        display: none;
+        font-size: 60%;
+        padding-top: 30px;
+    }
+
+    #trigger1 {
+        display: none;
+    }
+
+
+    #trigger1:checked + .responsive-menu ul li ul {
+        display: block;
+    }
+
+    .responsive-menu1 {
+
+        padding: 10px;
+        font-size: 200%;
+    }
+
+    .responsive-menu1 ul li ul li {
+        padding: 10px;
+
+    }
+
+    .responsive-menu1 ul li ul {
+        display: none;
+        font-size: 60%;
+        padding-top: 30px;
+    }
+
+    #trigger3 {
+        display: none;
+    }
+
+
+    #trigger3:checked + .responsive-menu ul li ul {
+        display: block;
+    }
+
+    .responsive-menu3 {
+
+        padding: 10px;
+        font-size: 200%;
+    }
+
+    .responsive-menu3 ul li ul li {
+        padding: 10px;
+
+    }
+
+    .responsive-menu3 ul li ul {
+        display: none;
+        font-size: 60%;
+        padding-top: 30px;
+    }
+
+    #trigger4 {
+        display: none;
+    }
+
+
+    #trigger4:checked + .responsive-menu ul li ul {
+        display: block;
+    }
+
+    .responsive-menu4 {
+
+        padding: 10px;
+        font-size: 200%;
+    }
+
+    .responsive-menu4 ul li ul li {
+        padding: 10px;
+
+    }
+
+    .responsive-menu4 ul li ul {
+        display: none;
+        font-size: 60%;
+        padding-top: 30px;
+    }
+
+
+</style>
+
 
 <section class="ftco-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <ul>
+
+                  <div >
+
                     {% load mptt_tags %}
 
                     {% recursetree category %}
-
+                           <li>
+                            {% if node.is_leaf_node %}
                         <a href="/category/{{ node.slug }}/{{ node.id }}">
-                            <li style="color: #0b0b0b">
-                                {{ node.title }}
-                                {% if not node.is_leaf_node %}
+
+                            {{ node.title }}</a>
+                           {% endif %}
+                            {% if not node.is_leaf_node %}
+                                <input type="checkbox" id="trigger{{ node.listeleme }}">
+                                <div class="responsive-menu">
                                     <ul>
+                                        <li>
+                                            <label for="trigger{{ node.listeleme }}">↕↕ </label> <a href="/category/{{ node.slug }}/{{ node.id }}">{{ node.title }}
 
-                                        {{ children }}
+                                                    <ul>
+
+                                                              {{ children }}
+
+
+                                                    </ul>
+
                                         </li>
+
                                     </ul>
-                                {% endif %}
-                            </li>
-                        </a>
+                                </div>
+                           </a>
+                            {% endif %}
 
+ </li>
                     {% endrecursetree %}
-
-                </ul>
-                <div class="search-wrap">
-                    <h3>Advance Search</h3>
-                    <form action="#" class="search-property">
+</div>
+                    <HR>
+             <div class="search-wrap">
+                    <h3>Gelişmiş Arama</h3>
+                    <form action="/search2/" method="get" class="search-property">
                         <div class="row">
                             <div class="col-md-12 align-items-end ftco-animate">
                                 <div class="form-group">
-                                    <label for="#">Keyword</label>
+                                    <label for="#">Arama</label>
                                     <div class="form-field">
                                         <div class="icon"><span class="icon-pencil"></span></div>
-                                        <input type="text" class="form-control" placeholder="Keyword">
+                                        {% csrf_token %}
+                                        <input id="query2" name="query2" type="search" class="form-control"
+                                               placeholder="Arama yap">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-12 align-items-end ftco-animate">
                                 <div class="form-group">
-                                    <label for="#">Location</label>
+                                    <label for="#">İl</label>
                                     <div class="form-field">
                                         <div class="icon"><span class="icon-pencil"></span></div>
-                                        <input type="text" class="form-control" placeholder="City/Locality Name">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 align-items-end ftco-animate">
-                                <div class="form-group">
-                                    <label for="#">Property Type</label>
-                                    <div class="form-field">
-                                        <div class="select-wrap">
-                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Type</option>
-                                                <option value="">Commercial</option>
-                                                <option value="">- Office</option>
-                                                <option value="">Residential</option>
-                                                <option value="">Villa</option>
-                                                <option value="">Condominium</option>
-                                                <option value="">Apartment</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 align-items-end ftco-animate">
-                                <div class="form-group">
-                                    <label for="#">Property Status</label>
-                                    <div class="form-field">
-                                        <div class="select-wrap">
-                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Type</option>
-                                                <option value="">Rent</option>
-                                                <option value="">Sale</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 align-items-end ftco-animate">
-                                <div class="form-group">
+                                        <select name="cityid2" id="cityid2" class="form-control">
 
+                                            <option style="color: #0b0b0b" value="">Hepsi</option>
+                                            <option style="color: #0b0b0b" value="1">Adana</option>
+                                            <option style="color: #0b0b0b" value="2">Adıyaman</option>
+                                            <option style="color: #0b0b0b" value="3">Afyonkarahisar</option>
+                                            <option style="color: #0b0b0b" value="4">Ağrı</option>
+                                            <option style="color: #0b0b0b" value="5">Amasya</option>
+                                            <option style="color: #0b0b0b" value="6">Ankara</option>
+                                            <option style="color: #0b0b0b" value="7">Antalya</option>
+                                            <option style="color: #0b0b0b" value="8">Artvin</option>
+                                            <option style="color: #0b0b0b" value="9">Aydın</option>
+                                            <option style="color: #0b0b0b" value="10">Balıkesir</option>
+                                            <option style="color: #0b0b0b" value="11">Bilecik</option>
+                                            <option style="color: #0b0b0b" value="12">Bingöl</option>
+                                            <option style="color: #0b0b0b" value="13">Bitlis</option>
+                                            <option style="color: #0b0b0b" value="14">Bolu</option>
+                                            <option style="color: #0b0b0b" value="15">Burdur</option>
+                                            <option style="color: #0b0b0b" value="16">Bursa</option>
+                                            <option style="color: #0b0b0b" value="17">Çanakkale</option>
+                                            <option style="color: #0b0b0b" value="18">Çankırı</option>
+                                            <option style="color: #0b0b0b" value="19">Çorum</option>
+                                            <option style="color: #0b0b0b" value="20">Denizli</option>
+                                            <option style="color: #0b0b0b" value="21">Diyarbakır</option>
+                                            <option style="color: #0b0b0b" value="22">Edirne</option>
+                                            <option style="color: #0b0b0b" value="23">Elazığ</option>
+                                            <option style="color: #0b0b0b" value="24">Erzincan</option>
+                                            <option style="color: #0b0b0b" value="25">Erzurum</option>
+                                            <option style="color: #0b0b0b" value="26">Eskişehir</option>
+                                            <option style="color: #0b0b0b" value="27">Gaziantep</option>
+                                            <option style="color: #0b0b0b" value="28">Giresun</option>
+                                            <option style="color: #0b0b0b" value="29">Gümüşhane</option>
+                                            <option style="color: #0b0b0b" value="30">Hakkâri</option>
+                                            <option style="color: #0b0b0b" value="31">Hatay</option>
+                                            <option style="color: #0b0b0b" value="32">Isparta</option>
+                                            <option style="color: #0b0b0b" value="33">Mersin</option>
+                                            <option style="color: #0b0b0b" value="34">İstanbul</option>
+                                            <option style="color: #0b0b0b" value="35">İzmir</option>
+                                            <option style="color: #0b0b0b" value="36">Kars</option>
+                                            <option style="color: #0b0b0b" value="37">Kastamonu</option>
+                                            <option style="color: #0b0b0b" value="38">Kayseri</option>
+                                            <option style="color: #0b0b0b" value="39">Kırklareli</option>
+                                            <option style="color: #0b0b0b" value="40">Kırşehir</option>
+                                            <option style="color: #0b0b0b" value="41">Kocaeli</option>
+                                            <option style="color: #0b0b0b" value="42">Konya</option>
+                                            <option style="color: #0b0b0b" value="43">Kütahya</option>
+                                            <option style="color: #0b0b0b" value="44">Malatya</option>
+                                            <option style="color: #0b0b0b" value="45">Manisa</option>
+                                            <option style="color: #0b0b0b" value="46">Kahramanmaraş</option>
+                                            <option style="color: #0b0b0b" value="47">Mardin</option>
+                                            <option style="color: #0b0b0b" value="48">Muğla</option>
+                                            <option style="color: #0b0b0b" value="49">Muş</option>
+                                            <option style="color: #0b0b0b" value="50">Nevşehir</option>
+                                            <option style="color: #0b0b0b" value="51">Niğde</option>
+                                            <option style="color: #0b0b0b" value="52">Ordu</option>
+                                            <option style="color: #0b0b0b" value="53">Rize</option>
+                                            <option style="color: #0b0b0b" value="54">Sakarya</option>
+                                            <option style="color: #0b0b0b" value="55">Samsun</option>
+                                            <option style="color: #0b0b0b" value="56">Siirt</option>
+                                            <option style="color: #0b0b0b" value="57">Sinop</option>
+                                            <option style="color: #0b0b0b" value="58">Sivas</option>
+                                            <option style="color: #0b0b0b" value="59">Tekirdağ</option>
+                                            <option style="color: #0b0b0b" value="60">Tokat</option>
+                                            <option style="color: #0b0b0b" value="61">Trabzon</option>
+                                            <option style="color: #0b0b0b" value="62">Tunceli</option>
+                                            <option style="color: #0b0b0b" value="63">Şanlıurfa</option>
+                                            <option style="color: #0b0b0b" value="64">Uşak</option>
+                                            <option style="color: #0b0b0b" value="65">Van</option>
+                                            <option style="color: #0b0b0b" value="66">Yozgat</option>
+                                            <option style="color: #0b0b0b" value="67">Zonguldak</option>
+                                            <option style="color: #0b0b0b" value="68">Aksaray</option>
+                                            <option style="color: #0b0b0b" value="69">Bayburt</option>
+                                            <option style="color: #0b0b0b" value="70">Karaman</option>
+                                            <option style="color: #0b0b0b" value="71">Kırıkkale</option>
+                                            <option style="color: #0b0b0b" value="72">Batman</option>
+                                            <option style="color: #0b0b0b" value="73">Şırnak</option>
+                                            <option style="color: #0b0b0b" value="74">Bartın</option>
+                                            <option style="color: #0b0b0b" value="75">Ardahan</option>
+                                            <option style="color: #0b0b0b" value="76">Iğdır</option>
+                                            <option style="color: #0b0b0b" value="77">Yalova</option>
+                                            <option style="color: #0b0b0b" value="78">Karabük</option>
+                                            <option style="color: #0b0b0b" value="79">Kilis</option>
+                                            <option style="color: #0b0b0b" value="80">Osmaniye</option>
+                                            <option style="color: #0b0b0b" value="81">Düzce</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 align-items-end ftco-animate">
+                                <div class="form-group">
+                                    <label for="#">İlçe</label>
+                                    <div class="form-field">
+                                        <div class="icon"><span class="icon-pencil"></span></div>
+                                        <input id="districtid" name="districtid" type="search" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 align-items-end ftco-animate">
+                                <div class="form-group">
+                                    <label for="#">Ev Tipi</label>
                                     <div class="form-field">
                                         <div class="select-wrap">
+                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                            {% load mptt_tags %}
+                                            <select name="catid2" id="catid2" class="form-control">
+                                                <option style="color: #0b0b0b" value="">Tüm Tipler</option>
+                                                {% recursetree category %}
+
+                                                    {% if node.is_leaf_node %}
+                                                        <option style="color: #0b0b0b" value="{{ node.id }}"
+                                                        >{{ node.title }}</option>
+
+
+                                                    {% endif %}
+                                                    {% if not node.is_leaf_node %}
+                                                        <optgroup label="{{ node.title }}" style="color: #0b0b0b">
+                                                            {{ children }}
+
+                                                        </optgroup>
+                                                    {% endif %}
+                                                {% endrecursetree %}
+
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
 
                         <div class="row">
+
+
                             <div class="col-md-12 align-items-end ftco-animate">
                                 <div class="form-group">
-                                    <label for="#">Min Beds</label>
+                                    <label for="#">Mininimum Fiyat</label>
                                     <div class="form-field">
                                         <div class="select-wrap">
                                             <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">1</option>
-                                                <option value="">2</option>
-                                                <option value="">3</option>
-                                                <option value="">4</option>
-                                                <option value="">5</option>
+                                            <select name="minpriceid" id="minpriceid" class="form-control">
+                                                <option value="">Belirlenmedi</option>
+                                                <option value="100000">100,000 ₺</option>
+                                                <option value="200000">200,000 ₺</option>
+                                                <option value="250000">250,000 ₺</option>
+                                                <option value="300000">300,000 ₺</option>
+                                                <option value="350000">350,000 ₺</option>
+                                                <option value="400000">400,000 ₺</option>
+                                                <option value="500000">500,000 ₺</option>
+                                                <option value="600000">600,000 ₺</option>
+                                                <option value="800000">800,000 ₺</option>
+                                                <option value="1000000">1,000,000 ₺</option>
+                                                <option value="2000000">2,000,000 ₺</option>
+                                                <option value="5000000">5,000,000 ₺</option>
+                                                <option value="10000000">10,000,000 ₺</option>
+                                                <option value="15000000">15,000,000 ₺</option>
                                             </select>
                                         </div>
                                     </div>
@@ -113,16 +382,26 @@
                             </div>
                             <div class="col-md-12 align-items-end ftco-animate">
                                 <div class="form-group">
-                                    <label for="#">Min Bathroom</label>
+                                    <label for="#">Maksimum Fiyat</label>
                                     <div class="form-field">
                                         <div class="select-wrap">
                                             <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">1</option>
-                                                <option value="">2</option>
-                                                <option value="">3</option>
-                                                <option value="">4</option>
-                                                <option value="">5</option>
+                                            <select name="maxpriceid" id="maxpriceid" class="form-control">
+                                                <option value="">Belirlenmedi</option>
+                                                <option value="100000">100,000 ₺</option>
+                                                <option value="200000">200,000 ₺</option>
+                                                <option value="250000">250,000 ₺</option>
+                                                <option value="300000">300,000 ₺</option>
+                                                <option value="350000">350,000 ₺</option>
+                                                <option value="400000">400,000 ₺</option>
+                                                <option value="500000">500,000 ₺</option>
+                                                <option value="600000">600,000 ₺</option>
+                                                <option value="800000">800,000 ₺</option>
+                                                <option value="1000000">1,000,000 ₺</option>
+                                                <option value="2000000">2,000,000 ₺</option>
+                                                <option value="5000000">5,000,000 ₺</option>
+                                                <option value="10000000">10,000,000 ₺</option>
+                                                <option value="15000000">15,000,000 ₺ ve üstü</option>
                                             </select>
                                         </div>
                                     </div>
@@ -130,73 +409,23 @@
                             </div>
                             <div class="col-md-12 align-items-end ftco-animate">
                                 <div class="form-group">
-                                    <label for="#">Min Price</label>
-                                    <div class="form-field">
-                                        <div class="select-wrap">
-                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Min Price</option>
-                                                <option value="">$1,000</option>
-                                                <option value="">$5,000</option>
-                                                <option value="">$10,000</option>
-                                                <option value="">$50,000</option>
-                                                <option value="">$100,000</option>
-                                                <option value="">$200,000</option>
-                                                <option value="">$300,000</option>
-                                                <option value="">$400,000</option>
-                                                <option value="">$500,000</option>
-                                                <option value="">$600,000</option>
-                                                <option value="">$700,000</option>
-                                                <option value="">$800,000</option>
-                                                <option value="">$900,000</option>
-                                                <option value="">$1,000,000</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 align-items-end ftco-animate">
-                                <div class="form-group">
-                                    <label for="#">Max Price</label>
-                                    <div class="form-field">
-                                        <div class="select-wrap">
-                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Max Price</option>
-                                                <option value="">$5,000</option>
-                                                <option value="">$10,000</option>
-                                                <option value="">$50,000</option>
-                                                <option value="">$100,000</option>
-                                                <option value="">$200,000</option>
-                                                <option value="">$300,000</option>
-                                                <option value="">$400,000</option>
-                                                <option value="">$500,000</option>
-                                                <option value="">$600,000</option>
-                                                <option value="">$700,000</option>
-                                                <option value="">$800,000</option>
-                                                <option value="">$900,000</option>
-                                                <option value="">$1,000,000</option>
-                                                <option value="">$2,000,000</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 align-items-end ftco-animate">
-                                <div class="form-group">
-                                    <label for="#">Min Area <span>(sq ft)</span></label>
+                                    <label for="#">Minimum m²</label>
                                     <div class="form-field">
                                         <div class="icon"><span class="icon-pencil"></span></div>
-                                        <input type="text" class="form-control" placeholder="Min Area">
+                                        <input id="minareaid" value="" name="minareaid" type="number"
+                                               class="form-control"
+                                               placeholder="m²">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-12 align-items-end ftco-animate">
                                 <div class="form-group">
-                                    <label for="#">Max Area <span>(sq ft)</span></label>
+                                    <label for="#">Maksimum m²</label>
                                     <div class="form-field">
                                         <div class="icon"><span class="icon-pencil"></span></div>
-                                        <input type="text" class="form-control" placeholder="Max Area">
+                                        <input id="maxareaid" name="maxareaid" value="" type="number"
+                                               class="form-control"
+                                               placeholder="m²">
                                     </div>
                                 </div>
                             </div>
@@ -210,4 +439,4 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            </div><!-- end -->

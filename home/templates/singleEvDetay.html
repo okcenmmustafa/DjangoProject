@@ -14,12 +14,67 @@
 {% endblock %}
 
 {% block content %}
+    {% load humanize %}
+    <style>
+    li{
+
+    }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .rate {
+            float: left;
+            height: 46px;
+            padding: 0 10px;
+        }
+
+        .rate:not(:checked) > input {
+            position: absolute;
+            top: -9999px;
+        }
+
+        .rate:not(:checked) > label {
+            float: right;
+            width: 1em;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 30px;
+            color: #ccc;
+        }
+
+        .rate:not(:checked) > label:before {
+            content: '★ ';
+        }
+
+        .rate > input:checked ~ label {
+            color: #ffc700;
+        }
+
+        .rate:not(:checked) > label:hover,
+        .rate:not(:checked) > label:hover ~ label {
+            color: #deb217;
+        }
+
+        .rate > input:checked + label:hover,
+        .rate > input:checked + label:hover ~ label,
+        .rate > input:checked ~ label:hover,
+        .rate > input:checked ~ label:hover ~ label,
+        .rate > label:hover ~ input:checked ~ label {
+            color: #c59b08;
+        }
+
+        /* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+    </style>
     {% load static %}
     <div class="col-md-9 properties-single">
-        <h2><a href="/category/{{ house.category.slug }}/{{ house.category.id }}">{{ house.category }}<a
+        <h2 class="mr-2"><a href="/category/{{ house.category.slug }}/{{ house.category.id}}">{{ house.category.parent }}<a href="/category/{{ house.category.slug }}/{{ house.category.id }}">/{{ house.category.title  }}<a
                 href="/houses/{{ house.slug }}/{{ house.id }}">/{{ house.title }}</a></h2>
 
-        <div class="single-slider owl-carousel">
+        <div class="single-slider owl-carousel" style="padding-top: 70px">
 
             <div class="item">
                 <div class="properties-img" style="background-image: url({{ house.image.url }});"></div>
@@ -34,87 +89,149 @@
         <div class="col-md-12 Properties-single mt-4 mb-5 ftco-animate">
             <div class="row"
             ">
-            <div class="col-sm-6" style="padding-top: 80px;"><h2>{{ house.title }}</h2></div>
-            <div class="col-sm-3" style="padding: 70px 0; text-align: center;"><h1
-                    style="color:green"> {{ house.price }} ₺</h1></div>
+            <div class="col-sm-6" style="padding-top: 80px;"><h1>{{ house.title }}</h1></div>
+            <div class="col-sm-6" style="padding: 70px 0; text-align: center;"><h1
+                    style="color:green;font-size:50px"> {{ house.price|intcomma }} ₺</h1></div>
 
         </div>
-        <p class="rate mb-4">
-            <span class="loc"><a href="#"><i class="icon-map"></i> {{ house.location }}</a></span>
+
+       <div class="about-author d-flex p-4 bg-light">
+
+              <div class="bio mr-5">
+                   <div >
+            <h2>İlan Sahibi</h2>
+               <hr>
+           </div>
+                <img src="{{house.userOwner.userprofile.image.url}}" style="height: 150px;width:150px" alt="Image placeholder" class="img-fluid mb-4">
+
+              </div>
+             <div class="desc" style="margin-top: 70px">
+                <h3>{{house.userOwner.first_name}} {{ house.userOwner.last_name }}</h3>
+                <h3 style="border-style: outset;text-align: center">{{house.userOwner.userprofile.phone}}</h3>
+                <h3 >{{house.userOwner.userprofile.}}</h3>
+                 <h3><a class="btn py-3 px-4 btn-primary">Diğer İlanları</a></h3>
+
+              </div>
+
+
+     </div>
+    <hr>
+     <div class="d-md-flex mt-12 mb-12" style="padding: 20px">
+        <p class="rate mb-4" style="font-size: 30px">
+            <span class="loc"><a href="#"><i class="icon-map"></i> {{ house.locationDetail }} {{ house.get_city_display }}/{{ house.district }}</a></span>
         </p>
-
-        <div class="d-md-flex mt-5 mb-5">
-            <ul>
-                <li><span>Lot Area: </span> 1,250 SQ FT</li>
-                <li><span>Bed Rooms: </span> 4</li>
-                <li><span>Bath Rooms: </span> 4</li>
-                <li><span>Garage: </span> 1</li>
-            </ul>
-            <ul class="ml-md-5">
-                <li><span>Floor Area: </span> 1,300 SQ FT</li>
-                <li><span>Year Build:: </span> 2018</li>
-                <li><span>Stories: </span> 1</li>
-                <li><span>Roofing: </span> New</li>
+     </div>
+    <hr>
+    <div class="d-md-flex mt-12 mb-12" style="padding: 20px; font-size: 30px">
+        <p class="rate mb-4">
+             {{ house.description }}
+        </p>
+     </div>
+     <hr>
+        <div class="d-md-flex mt-12 mb-12" style="padding: 30px">
+            <ul style="font-size: 20px">
+                <li><span>Alan :</span> {{ house.area }} m²</li>
+                <li><span>Yatak Odası: </span>{{house.bedroom}}</li>
+                <li><span>Banyo: </span>{{ house.bathroom }}</li>
+                <li><span>Garaj: </span>{{house.garage}}</li>
             </ul>
         </div>
-        <p>{{ house.description }}</p>
-    </div>
-    <div class="col-md-12 properties-single ftco-animate mb-5 mt-4">
-        <h3 class="mb-4">Take A Tour</h3>
-        <div class="block-16">
-            <figure>
-                <img src="{% static 'images/image_2.jpg' %}"" alt="Image placeholder" class="img-fluid">
-                <a href="https://vimeo.com/45830194" class="play-button popup-vimeo"><span class="icon-play"></span></a>
-            </figure>
+    <hr>
+        <div class="d-md-flex mt-12 mb-12" style="padding: 30px">
+            <ul style="font-size: 20px">
+             <li><span>Bina Yapım Yılı </span> {{house.buildTime}}</li>
+             <li><span>Istıma Tipi </span> {{house.buildTime}}</li>
+             <li><span>Kullanım Durumu </span> {{house.buildTime}}</li>
+             <li><span>Aidat </span> {{house.buildTime}}</li>
+             <li><span>Kimden </span> {{house.buildTime}}</li>
+             <li><span>Oda Sayısı </span> {{house.buildTime}}</li>
+             <li><span>Binadaki Kat Sayısı </span> {{house.buildTime}}</li>
+             <li><span>Krediye Uygun </span> {{house.buildTime}}</li>
+            </ul>
         </div>
+
+     <div class="d-md-flex mt-12 mb-12" style="padding: 60px;font-size: 30px;background-color: rgba(56,112,128,0.05)">
+        <p>{{ house.detail|safe }}</p>
     </div>
 
     <div class="col-md-12 properties-single ftco-animate mb-5 mt-4">
+        {% for rs in comments %}
+                 <div class="about-author d-flex p-4 bg-light">
+              <div class="bio mr-5">
+                <img src="{{rs.user.userprofile.image.url}}" style="height: 150px;width:150px" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <h3>{{rs.user.first_name}} {{ rs.user.last_name }}</h3>
+                <p>{{ rs.comment }}</p>
+              </div>
+                 <div>
+
+                     <p class="rate">
+                         {% if rs.rate == 1  %}
+                            <i class="icon-star"></i><i class="icon-star-0"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> </p>
+                        {% elif rs.rate == 2 %}
+                         <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></p>
+                        {% elif  rs.rate == 3 %}
+                          <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></p>
+                        {% elif  rs.rate == 4 %}
+                           <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></p>
+                        {% elif  rs.rate == 5 %}
+                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i> </p>
+                        {% endif %}
+
+
+
+                 </div>
+            </div>
+                <hr>
+            {% endfor %}
         <h4 class="mb-4">Review &amp; Ratings</h4>
         <div class="row">
-            <div class="col-md-6">
-                <form method="post" class="star-rating">
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">
-                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-                                    class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i> 100 Ratings</span>
-                            </p>
-                        </label>
+            <div class="col-md-12">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}" rpşe="alert">
+                        {{ message }}
                     </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">
-                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-                                    class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i> 30 Ratings</span>
-                            </p>
-                        </label>
+                {% endfor %}
+            {% endif %}
+                <form action="/house/addcomment/{{ house.id }}" method="post" class="p-5 bg-light">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input name="subject" id="id_subject" type="text" class="form-control">
                     </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">
-                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-                                    class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 5 Ratings</span>
-                            </p>
-                        </label>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea name="comment" id="message" cols="3" rows="3" class="form-control"></textarea>
                     </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">
-                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-                                    class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 0 Ratings</span>
-                            </p>
-                        </label>
+                    <div class="form-group">
+                        <strong class="text-uppercase">Your Rating</strong>
+                        <div class="input-rating">
+
+
+                            <div class="rate">
+                                <input type="radio" id="star5" name="rate" value="5"/> <label for="star5" title="5 stars">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4"/><label for="star4" title="4 stars">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3"/> <label for="star3" title="3 stars">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2"/><label for="star2" title="2 stars">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1"/><label for="star1" title="1 star">1 star</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">
-                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i
-                                    class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 0 Ratings</span>
-                            </p>
-                        </label>
+                <br>
+                <div class="form-group" style="margin-left: 300px">
+                    {% if user.id is not None %}
+                        <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
+                    {% else %}
+                        Yorum Eklemek İçin Login Olunuz!
+                    {% endif %}
+
+
                     </div>
+
                 </form>
+
             </div>
         </div>
     </div>

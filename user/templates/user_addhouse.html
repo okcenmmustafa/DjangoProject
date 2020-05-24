@@ -1,0 +1,75 @@
+{% extends "homebase.html" %}
+
+{% block title %} İletisim Sayfası {% endblock %}
+{% block keywords %} İletisim Sayfası anahtar kelimeler {% endblock %}
+{% block description %} İletisim Sayfası açıklama {% endblock %}
+
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
+    
+{% load static %}
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+{% endblock %}
+
+{% block baslik %}
+    {% include "baslik.html" %}
+    {% block link %} iletisim {% endblock %}
+{% endblock %}
+
+{% block body %}
+    {% load static %}
+    <style>
+        th {
+            padding: 5px;
+
+            text-align: center;
+        }
+
+        td {
+
+            text-align: left;
+
+            padding: 5px;
+        }
+
+        .button {
+            background-color: limegreen;
+            color: white;
+            font-size: 14px;
+            padding: 14px 40px;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+        }
+
+        .button:hover {
+            background-color: black; /* Green */
+            color: white;
+        }
+    </style>
+    <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
+        <div class="container">
+            <div class="row d-flex align-items-stretch no-gutters">
+
+                <div class="col-md-12 p-4 p-md-5 order-md-last bg-light">
+                     <h3 style="padding: 100px;padding-left: 400px">Yeni İlan Ekleme</h3>
+                    {% load static %}
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <fieldset class="form-group">
+                            {{ form.media }}
+                            {{ form.as_p }}
+                        </fieldset>
+                        <div class="form-group">
+                            <BUTTON class="btn py-3 px-4 btn-primary" TYPE="submit">Kaydet</BUTTON>
+                        </div>
+                    </form>
+
+            </div>
+        </div>
+
+
+    </section>
+
+{% endblock %}

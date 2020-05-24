@@ -6,6 +6,22 @@ from django.contrib.auth.models import User
 class SearchForm(forms.Form):
     query = forms.CharField(label='Search' , max_length=100)
     catid = forms.IntegerField()
+    cityid = forms.IntegerField()
+    priceid = forms.IntegerField()
+
+
+class SearchForm2(forms.Form):
+    query2 = forms.CharField(label='Search2' , max_length=100)
+    catid2 = forms.IntegerField()
+    cityid2 = forms.IntegerField()
+    minbedid = forms.IntegerField()
+    districtid = forms.CharField(label='ilce' , max_length=100)
+    minbathid = forms.IntegerField()
+    minpriceid = forms.IntegerField()
+    maxpriceid = forms.IntegerField()
+    minareaid = forms.IntegerField()
+    maxareaid = forms.IntegerField()
+
 
 
 class SignUpForm(UserCreationForm):

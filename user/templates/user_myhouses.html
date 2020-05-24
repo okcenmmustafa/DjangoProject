@@ -1,0 +1,97 @@
+{% extends "homebase.html" %}
+
+{% block title %} İletisim Sayfası {% endblock %}
+{% block keywords %} İletisim Sayfası anahtar kelimeler {% endblock %}
+{% block description %} İletisim Sayfası açıklama {% endblock %}
+
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
+{% endblock %}
+
+{% block baslik %}
+    {% include "baslik.html" %}
+    {% block link %} iletisim {% endblock %}
+{% endblock %}
+
+{% block body %}
+    {% load static %}
+    {% load humanize %}
+    <style>
+        th {
+            padding: 5px;
+
+            text-align: center;
+        }
+
+        td {
+
+            text-align: left;
+
+            padding: 5px;
+        }
+
+        .button {
+            background-color: limegreen;
+            color: white;
+            font-size: 14px;
+            padding: 14px 40px;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+        }
+
+        .button:hover {
+            background-color: black; /* Green */
+            color: white;
+        }
+    </style>
+    <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
+        <div class="container">
+            <div class="row d-flex align-items-stretch no-gutters">
+                <div class="col-md-2 p-4 p-md-5 order-md-last bg-light">
+                    {% include 'user_panel.html' %}
+                </div>
+                <div class="col-md-10 p-4 p-md-5 order-md-last bg-light">
+                    <a class="btn py-3 px-4 btn-primary" style="margin-left: 400px" href="/user/addhouse"> İlan Ver</a>
+                    <h1>İlan verilen evler</h1>
+                    <hr>
+                    <div class="container" style="overflow-x:auto;">
+                        <table class="table-borderless" width="600  ">
+                            <tr>
+                                <th class="text-left">Fotoğraf</th>
+                                <th class="text-left">Başlık</th>
+                                <th class="text-left">Ev Tipi</th>
+                                <th class="text-left">Fiyat</th>
+                                <th class="text-left">il</th>
+                                <th class="text-left">ilçe</th>
+                                <th class="text-left">İlan Tarihi</th>
+                                <th class="text-left">Durum</th>
+                            </tr>
+                            {% for rs in myhouses %}
+                                <tr>
+                                    <td class="text-left"><img src="{{ rs.image.url }}"
+                                                               style="height: 100px;width: 100px"></td>
+                                    <td class="text-left">{{ rs.title }}</td>
+                                    <td class="text-left">{{ rs.category }}</td>
+                                    <td class="text-left">{{ rs.price|intcomma }}</td>
+                                    <td class="text-left">{{ rs.get_city_display }}</td>
+                                    <td class="text-left">{{ rs.district }}</td>
+                                    <td class="text-left">{{ rs.create_at }}</td>
+                                    <td class="text-left">{{ rs.status }}</td>
+                                    <td class="text-left"><a class="btn py-3 px-4 btn-primary"
+                                                             href="/user/houseedit/{{ rs.id }}">Edit</a></td>
+                                    <td class="text-left"><a onclick="return confirm('İlan silinecek! Emin misiniz ?')"
+                                                             class="btn py-3 px-4 btn-primary" href="/user/housedelete/{{ rs.id }}">Delete</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <6*
+
+    </section>
+
+{% endblock %}

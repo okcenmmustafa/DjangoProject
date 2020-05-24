@@ -1,43 +1,55 @@
 {% extends "homebase.html" %}
 
-{% block title %} {{categorydata.title}} {% endblock %}
-{% block keywords %} {{categorydata.keywords}} {% endblock  %}
+{% block title %} {{ categorydata.title }} {% endblock %}
+{% block keywords %} {{ categorydata.keywords }} {% endblock %}
 {% block description %} {{ categorydata.description }} {% endblock %}
 
 {% block head %}
-        <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
 {% endblock %}
 
 {% block sidebar %}
-     {% include "sidebar.html" %}
+    {% include "sidebar.html" %}
 {% endblock %}
 
 {% block content %}
-{% load static %}
+    {% load static %}
+    {% load humanize %}
 
-					<div class="col-lg-9">
-                     <h2><a href="/category/{{ categorydata.slug }}/{{ categorydata.id }}">{{ categorydata.title }}</a></h2>
-		        <div class="row">
 
-                <!-- İlanların Çekilmesi -->
-                    {% for rs in houses %}
-		    			<div class="col-md-6 col-lg-4 ftco-animate">
-		    				<div class="project">
-		    					<div class="img">
-				    				<img src="{{ rs.image.url    }}" class="img-fluid" alt="Colorlib Template">
-				    				<div class="text">
-				    					<span>Sale</span>
-				    					<h3><a href="/houses/{{rs.slug}}/{{ rs.id }}">{{ rs.title }}</a></h3>
-				    				</div>
-			    				</div>
-			    				<div class="desc pt-3">
-			    					<h4 class="price">{{rs.price}}</h4>
-										<p class="h-info"><span class="location">{{ rs.location }}</span> <span class="details">&mdash; 3bds, 2bath</span></p>
-			    				</div>
-		    				</div>
-		    			</div>
-                    {% endfor %}
+    <div class="col-lg-9">
 
+        <h5 class="mr-2"><a href="/category/{{ categorydata.slug }}/{{ categorydata.id }}">{{ categorydata.title }}</a>
+        </h5>
+        <div class="row">
+
+            <!-- İlanların Çekilmesi -->
+            {% if not houses %}
+                <div class="col-md-12 col-lg-12 ftco-animate">
+                    <h1>Eşleşen bir ilan Bulunamadı </h1>
+                </div>
+
+            {% else %}
+                {% for rs in houses %}
+                    <div class="col-md-6 col-lg-4 ftco-animate">
+                        <div class="project">
+                            <div class="img">
+                                <img src="{{ rs.image.url }}" class="img-fluid" alt="Colorlib Template">
+                                <div class="text">
+
+                                    <h3><a href="/houses/{{ rs.slug }}/{{ rs.id }}">{{ rs.title }}</a></h3>
+                                </div>
+                            </div>
+                            <div class="desc pt-3">
+                                <h4 class="price">{{ rs.price|intcomma }} ₺</h4>
+                                <p class="h-info"><span class="location">{{ rs.district }}</span> <span
+                                        class="details">&mdash;{{ rs.get_city_display }}     </span></p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                </div>
 		    		</div>
 		    		<div class="row no-gutters my-5">
 		          <div class="col text-center">
@@ -50,12 +62,13 @@
 		                <li><a href="#">4</a></li>
 		                <li><a href="#">5</a></li>
 		                <li><a href="#">&gt;</a></li>
-		              </ul>
-		            </div>
-		          </div>
-		        </div>
-		    	</div>
-	    	</div>
-			</div>
-		</section>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+    </div>
+    </div>
+    </div>
+    </section>
 {% endblock %}

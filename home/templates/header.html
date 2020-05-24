@@ -55,10 +55,13 @@
                 <li class="nav-item"><a href="/hakkimizda" class="nav-link">Hakkımızda</a></li>
 
                 {% if user.id is  not None %}
-                    <div class="dropdown" style="margin:auto; height:%50">
-                        <button class="dropbtn">{{ user.first_name }} {{ user.last_name }}</button>
+                    <div class="dropdown" style="margin:auto">
+                    <img class="icon-adjust" style="border-radius: 20px" height="70px" width="70px" src="{{ user.userprofile.image.url }}">
+                        <div class="btn py-3 px-4 btn-primary" style="size: auto">{{ user.first_name }} {{ user.last_name }}</div>
                         <div class="dropdown-content">
-                            <a href="#">Favoriler</a>
+                            <a href="/user/favorites">Favoriler</a>
+                            <a href="/user/myhouses">İlanlarım</a>
+                            <a href="/user/comments">Yorumlar</a>
                             <a href="/user">Hesap Ayarları</a>
                             <a href="/logout/">Çıkış</a>
                         </div>

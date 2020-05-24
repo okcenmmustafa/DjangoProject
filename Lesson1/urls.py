@@ -26,6 +26,7 @@ urlpatterns = [
     path('house/',include('house.urls')),
     path('home/',include('home.urls')),
     path('user/',include('user.urls')),
+    path('content/',include('content.urls')),
     path('ckeditor/' , include('ckeditor_uploader.urls')) ,
     path('home/' , include('home.urls')) ,
 
@@ -34,6 +35,7 @@ urlpatterns = [
     path('category/<slug:slug>/<int:id>/',views.category_ilanlar,name='category_ilanlar'),
     path('houses/<slug:slug>/<int:id>/',views.UrunSayfasi,name='UrunSayfasi'),
     path('search/',views.house_search,name='house_search'),
+    path('search2/',views.house_search2 ,name='house_search2'),
     path('search_auto/',views.house_search_auto,name='house_search_auto'),
 
 

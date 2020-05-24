@@ -2,12 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24289d0d-142c-4a21-9b2b-fb07fa858063" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_addhouse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_myhouses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Lesson1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FinalProjesi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson1/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson1/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/hakkimizda.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/hakkimizda.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/homeSearch.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/ilanlar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/ilanlar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/iletisim.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/iletisim.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/singleEvDetay.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/singleEvDetay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/migrations/0002_house.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0002_house.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/migrations/0003_saleorrent.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0003_saleorrent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/migrations/0004_auto_20200329_2212.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0004_auto_20200329_2212.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/migrations/0005_auto_20200329_2240.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0005_auto_20200329_2240.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/migrations/0006_auto_20200330_1854.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0006_auto_20200330_1854.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/migrations/0007_auto_20200505_0408.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0007_auto_20200505_0408.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/migrations/0008_house_slug.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0008_house_slug.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/migrations/0009_auto_20200505_2118.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0009_auto_20200505_2118.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/1.1-min.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/img_7567_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/img_7567_0_EIcdnU0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/unnamed_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/unnamed_1_qvEGz0s.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
     </list>
@@ -48,7 +85,7 @@
         <item name="Django default2" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="auth_user: table" type="3d80ac25:SqliteImplModel$Table" />
+        <item name="house_house: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -68,7 +105,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YoT3JzSF0YUPIks8sfTgeNhqZQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -90,19 +129,20 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Django\Lesson1\user" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Django\Lesson1\user\templates" />
+      <recent name="C:\Django\Lesson1\content" />
       <recent name="C:\Django\Lesson1\user" />
       <recent name="C:\Django\Lesson1\home\templates" />
       <recent name="C:\Django\Lesson1\house" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Django\Lesson1\user" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.forms">
+  <component name="RunManager" selected="Python.deneme">
     <configuration name="Test: user" type="DjangoTestsConfigurationType" temporary="true">
-      <module name="Lesson1" />
+      <module name="FinalProjesi" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -121,8 +161,30 @@
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="deneme" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinalProjesi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/home" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/home/deneme.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="forms" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Lesson1" />
+      <module name="FinalProjesi" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -143,30 +205,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tkinter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Lesson1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/Python" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/Python/tkinter.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="tkintercalisma" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Lesson1" />
+      <module name="FinalProjesi" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -187,8 +227,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinalProjesi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/home" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/home/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Lesson1" type="Python.DjangoServer" factoryName="Django server">
-      <module name="Lesson1" />
+      <module name="FinalProjesi" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -212,10 +274,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.deneme" />
+        <item itemvalue="Python.views" />
         <item itemvalue="Python.forms" />
         <item itemvalue="Django tests.Test: user" />
         <item itemvalue="Python.tkintercalisma" />
-        <item itemvalue="Python.tkinter" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +310,17 @@
       <workItem from="1589298151075" duration="7750000" />
       <workItem from="1589325138923" duration="10174000" />
       <workItem from="1589339766828" duration="382000" />
-      <workItem from="1589418069878" duration="9171000" />
+      <workItem from="1589418069878" duration="9481000" />
+      <workItem from="1589475676996" duration="12793000" />
+      <workItem from="1589489365284" duration="149000" />
+      <workItem from="1589489532396" duration="524000" />
+      <workItem from="1589492731911" duration="1491000" />
+      <workItem from="1589494259783" duration="13238000" />
+      <workItem from="1589507578554" duration="21217000" />
+      <workItem from="1589544419905" duration="26664000" />
+      <workItem from="1589587398307" duration="9418000" />
+      <workItem from="1589638070916" duration="14216000" />
+      <workItem from="1589666420470" duration="31015000" />
     </task>
     <task id="LOCAL-00001" summary="Üye giriş ve kayıt saflarının eklenmesi">
       <created>1589299857888</created>
@@ -263,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589339805720</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="User Güncelleme ve şifre değişikliği eklendi">
+      <created>1589432683459</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589432683459</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,45 +352,46 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Üye giriş ve kayıt saflarının eklenmesi" />
     <MESSAGE value="User Panel eklendi" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Panel eklendi" />
+    <MESSAGE value="User Güncelleme ve şifre değişikliği eklendi" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Güncelleme ve şifre değişikliği eklendi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="59" key="#Inspections" timestamp="1588648588478">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="59" key="#Inspections/0.0.1920.1080@0.0.1920.1080" timestamp="1588648588478" />
-    <state x="539" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589325324910">
+    <state x="539" y="179" width="1092" height="782" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589524815192">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="539" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589325324910" />
+    <state x="539" y="179" width="1092" height="782" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589524815192" />
     <state x="565" y="166" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585582712892">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="565" y="166" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1585582712892" />
-    <state x="408" y="0" key="CommitChangelistDialog2" timestamp="1589339798643">
+    <state x="408" y="0" key="CommitChangelistDialog2" timestamp="1589432681217">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="408" y="0" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1589339798643" />
-    <state x="639" y="178" key="FileChooserDialogImpl" timestamp="1587425363382">
+    <state x="408" y="0" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1589432681217" />
+    <state x="639" y="178" key="FileChooserDialogImpl" timestamp="1589489883709">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="639" y="178" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1587425363382" />
-    <state width="1853" height="264" key="GridCell.Tab.0.bottom" timestamp="1589425622433">
+    <state x="639" y="178" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1589489883709" />
+    <state width="1853" height="264" key="GridCell.Tab.0.bottom" timestamp="1589528848078">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1853" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1589425622433" />
-    <state width="1853" height="264" key="GridCell.Tab.0.center" timestamp="1589425622433">
+    <state width="1853" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1589528848078" />
+    <state width="1853" height="264" key="GridCell.Tab.0.center" timestamp="1589528848078">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1853" height="264" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1589425622433" />
-    <state width="1853" height="264" key="GridCell.Tab.0.left" timestamp="1589425622433">
+    <state width="1853" height="264" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1589528848078" />
+    <state width="1853" height="264" key="GridCell.Tab.0.left" timestamp="1589528848078">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1853" height="264" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1589425622433" />
-    <state width="1853" height="264" key="GridCell.Tab.0.right" timestamp="1589425622433">
+    <state width="1853" height="264" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1589528848078" />
+    <state width="1853" height="264" key="GridCell.Tab.0.right" timestamp="1589528848078">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1853" height="264" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1589425622433" />
+    <state width="1853" height="264" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1589528848078" />
     <state width="1836" height="327" key="GridCell.Tab.1.bottom" timestamp="1587424348812">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -335,31 +416,45 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="221" y="9" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1583608692667" />
-    <state x="506" y="278" key="com.intellij.ide.util.TipDialog" timestamp="1589423866807">
+    <state x="761" y="388" width="468" height="335" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1589489000924">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="506" y="278" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589423866807" />
+    <state x="761" y="388" width="468" height="335" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1080@0.0.1920.1080" timestamp="1589489000924" />
+    <state x="340" y="28" key="com.intellij.database.dbimport.ImportDialog" timestamp="1589518064610">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="340" y="28" key="com.intellij.database.dbimport.ImportDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589518064610" />
+    <state x="0" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1589489071983">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589489071983" />
+    <state x="219" y="275" key="com.intellij.ide.util.TipDialog" timestamp="1589666420667">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="219" y="275" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589666420667" />
     <state x="678" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589300685521">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="678" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1589300685521" />
-    <state x="0" y="0" width="920" height="1080" key="find.popup" timestamp="1585514016982">
+    <state x="0" y="0" width="1115" height="1080" key="find.popup" timestamp="1589482936063">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="0" y="0" width="920" height="1080" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1585514016982" />
+    <state x="0" y="0" width="1115" height="1080" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1589482936063" />
     <state x="425" y="132" width="1050" height="795" key="recent.locations.popup" timestamp="1589300716436">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="425" y="132" width="1050" height="795" key="recent.locations.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1589300716436" />
-    <state x="453" y="-2" width="1009" height="1470" key="search.everywhere.popup" timestamp="1589300700942">
+    <state x="453" y="-2" width="1009" height="1470" key="search.everywhere.popup" timestamp="1589556814706">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="453" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1589300700942" />
+    <state x="453" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1589556814706" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lesson1$deneme.coverage" NAME="deneme Coverage Results" MODIFIED="1589527197396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/home" />
     <SUITE FILE_PATH="coverage/Lesson1$Forms.coverage" NAME="forms Coverage Results" MODIFIED="1589425622415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/user" />
     <SUITE FILE_PATH="coverage/Lesson1$tkintercalisma.coverage" NAME="tkintercalisma Coverage Results" MODIFIED="1587425434151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/Python" />
     <SUITE FILE_PATH="coverage/Lesson1$tkinter.coverage" NAME="tkinter Coverage Results" MODIFIED="1587424134294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/Python" />
     <SUITE FILE_PATH="coverage/Lesson1$Test__user.coverage" NAME="Test: user Coverage Results" MODIFIED="1589333349558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Lesson1$views.coverage" NAME="views Coverage Results" MODIFIED="1589526689971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/home" />
   </component>
 </project>
