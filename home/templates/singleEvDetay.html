@@ -5,6 +5,7 @@
 {% block description %} {{ house.description }} {% endblock %}
 
 {% block head %}
+    <script src="https://kit.fontawesome.com/0ed6e4b46e.js" crossorigin="anonymous"></script>
     <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
 {% endblock %}
 
@@ -71,14 +72,15 @@
     </style>
     {% load static %}
     <div class="col-md-9 properties-single">
-        <h2 class="mr-2"><a href="/category/{{ house.category.slug }}/{{ house.category.id}}">{{ house.category.parent }}<a href="/category/{{ house.category.slug }}/{{ house.category.id }}">/{{ house.category.title  }}<a
-                href="/houses/{{ house.slug }}/{{ house.id }}">/{{ house.title }}</a></h2>
+        <h2 class="mr-2"><a href="/ilanlar">İlanlar</a>/ <a href="/category/{{ house.category.slug }}/{{ house.category.id}}">{{ house.category.parent }}</a>/<a href="/category/{{ house.category.slug }}/{{ house.category.id }}">{{ house.category.title  }}</a>/<a
+                href="/houses/{{ house.slug }}/{{ house.id }}">{{ house.title }}</a></h2>
 
         <div class="single-slider owl-carousel" style="padding-top: 70px">
 
             <div class="item">
                 <div class="properties-img" style="background-image: url({{ house.image.url }});"></div>
             </div>
+
             {% for rs in images %}
                 <div class="item">
                     <div class="properties-img" style="background-image: url({{ rs.image.url }});"></div>
@@ -86,11 +88,13 @@
             {% endfor %}
 
         </div>
+
         <div class="col-md-12 Properties-single mt-4 mb-5 ftco-animate">
-            <div class="row"
-            ">
-            <div class="col-sm-6" style="padding-top: 80px;"><h1>{{ house.title }}</h1></div>
-            <div class="col-sm-6" style="padding: 70px 0; text-align: center;"><h1
+            <div class="row">
+            <div class="col-sm-12" style="padding-top: 80px;text-align: center"><h1>{{ house.title }}</h1></div>
+
+                </div>
+            <div class="col-sm-12" style="padding: 70px 0; text-align: center;"><h1
                     style="color:green;font-size:50px"> {{ house.price|intcomma }} ₺</h1></div>
 
         </div>
@@ -122,36 +126,107 @@
         </p>
      </div>
     <hr>
-    <div class="d-md-flex mt-12 mb-12" style="padding: 20px; font-size: 30px">
-        <p class="rate mb-4">
+    <div class="d-md-flex mt-12 mb-12" style="margin: 20px; font-size: 30px">
+        <p class="container">
              {{ house.description }}
         </p>
      </div>
      <hr>
         <div class="d-md-flex mt-12 mb-12" style="padding: 30px">
-            <ul style="font-size: 20px">
-                <li><span>Alan :</span> {{ house.area }} m²</li>
-                <li><span>Yatak Odası: </span>{{house.bedroom}}</li>
-                <li><span>Banyo: </span>{{ house.bathroom }}</li>
-                <li><span>Garaj: </span>{{house.garage}}</li>
-            </ul>
+
+                <table class="col-12" w>
+                    <tr >
+                        <th style="width:400px">Alan </th>
+                        <td>: {{ house.area }}</td>
+                    </tr>
+                    <tr>
+                        <th>Yatak Odası </th>
+                        <td>: {{house.bedroom}}</td>
+                    </tr>
+                    <tr>
+                        <th>Banyo </th>
+                        <td>: {{ house.bathroom }}</td>
+                    </tr>
+                    <tr>
+                        <th>Garaj </th>
+                        <td>: {{house.garage}}</td>
+                    </tr>
+                </table>
+
         </div>
     <hr>
         <div class="d-md-flex mt-12 mb-12" style="padding: 30px">
-            <ul style="font-size: 20px">
-             <li><span>Bina Yapım Yılı </span> {{house.buildTime}}</li>
-             <li><span>Istıma Tipi </span> {{house.buildTime}}</li>
-             <li><span>Kullanım Durumu </span> {{house.buildTime}}</li>
-             <li><span>Aidat </span> {{house.buildTime}}</li>
-             <li><span>Kimden </span> {{house.buildTime}}</li>
-             <li><span>Oda Sayısı </span> {{house.buildTime}}</li>
-             <li><span>Binadaki Kat Sayısı </span> {{house.buildTime}}</li>
-             <li><span>Krediye Uygun </span> {{house.buildTime}}</li>
-            </ul>
+
+                <table class="col-12" w>
+                    <tr >
+                        <th style="width:400px">Bina Yapım Yılı </th>
+                        <td>: {{house.buildTime}}</td>
+                    </tr>
+                    <tr>
+                        <th>Bulunduğu Kat </th>
+                        <td>: {{house.kat}}</td>
+                    </tr>
+                    <tr>
+                        <th>Kat Sayısı </th>
+                        <td>: {{house.katsayisi}}</td>
+                    </tr>
+                    <tr>
+                        <th>Istıma Tipi </th>
+                        <td>: {{house.isinmatip}}</td>
+                    </tr>
+                    <tr>
+                        <th>Kullanım Durumu </th>
+                        <td>: {{house.kullanimDurumu}}</td>
+                    </tr>
+                    <tr>
+                        <th>Aidat </th>
+                        <td>: {{house.aidat}} ₺</td>
+                    </tr>
+                    <tr>
+                        <th>Kimden </th>
+                        <td>: {{house.kimden}}</td>
+                    </tr>
+                    <tr>
+                        <th>Oda Sayısı </th>
+                        <td>: {{house.category.title}}</td>
+                    </tr>
+                    <tr>
+                        <th>Kredi Uygunluğu </th>
+                        <td>: {{house.get_KrediUygun_display}}</td>
+                    </tr>
+                    <tr>
+                        <th>Cephe </th>
+                        <td>: {{house.cephe}}</td>
+                    </tr>
+                    <tr>
+                        <th>Yapı Tipi </th>
+                        <td>: {{house.yapiTipi}}</td>
+                    </tr>
+                    <tr>
+                        <th>Esya Durum </th>
+                        <td>: {{house.esyaDurum}}</td>
+                    </tr>
+                    <tr>
+                        <th>Tapu </th>
+                        <td>: {{house.tapuDurumu}}</td>
+                    </tr>
+                    <tr>
+                        <th>Takas </th>
+                        <td>: {{house.get_takas_display}}</td>
+                    </tr>
+
+
+
+                </table>
+
+
+
         </div>
 
      <div class="d-md-flex mt-12 mb-12" style="padding: 60px;font-size: 30px;background-color: rgba(56,112,128,0.05)">
+         <div class="container">
         <p>{{ house.detail|safe }}</p>
+         </div>
     </div>
 
     <div class="col-md-12 properties-single ftco-animate mb-5 mt-4">

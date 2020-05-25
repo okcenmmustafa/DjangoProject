@@ -34,7 +34,8 @@ class Menu(MPTTModel):
 class HouseForm(ModelForm):
     class Meta:
         model = House
-        fields=['title','slug','description','keywords','category','image','price','buildTime','area','bedroom','bathroom','garage','city','locationDetail','district','detail']
+        fields=['title','slug','description','keywords','category','image','price','aidat','buildTime','kat','katsayisi','area','cephe','bedroom','bathroom','KrediUygun','isinmatip','esyaDurum','yapiTipi',
+                'kullanimDurumu','tapuDurumu','takas','garage','city','locationDetail','district','detail']
 
         widgets={
             'title' : TextInput(attrs={'placeholder' : 'title','class': 'form-control'}),
@@ -44,6 +45,17 @@ class HouseForm(ModelForm):
             'category' : Select(attrs={'placeholder' : 'category','class': 'form-control'}),
             'price' : NumberInput(attrs={'placeholder' : 'price','class': 'form-control','onclick':'commas(self)'},),
             'buildTime' : NumberInput(attrs={'placeholder' : 'buildTime','class': 'form-control'}),
+            'kat' : NumberInput(attrs={'placeholder':'kat','class':'form-control'}),
+            'aidat' : NumberInput(attrs={'placeholder':'aidat','class':'form-control'}),
+            'isinmatip' : TextInput(attrs={'placeholder':'isinmatip','class':'form-control'}),
+            'katsayisi' : NumberInput(attrs={'placeholder':'katsayisi','class':'form-control'}),
+            'KrediUygun' : Select(attrs={'placeholder':'KrediUygun','class':'form-control'}),
+            'esyaDurum' : Select(attrs={'placeholder':'esyaDurum','class':'form-control'}),
+            'yapiTipi' : Select(attrs={'placeholder':'yapiTipi','class':'form-control'}),
+            'kullanimDurumu' : Select(attrs={'placeholder':'kullanimDurumu','class':'form-control'}),
+            'tapuDurumu' : Select(attrs={'placeholder':'tapuDurumu','class':'form-control'}),
+            'takas' : Select(attrs={'placeholder':'kat','takas':'form-control'}),
+            'cephe' : Select(attrs={'placeholder':'kat','cephe':'form-control'}),
             'area' : NumberInput(attrs={'placeholder' : 'area','class': 'form-control'}),
             'bedroom' : NumberInput(attrs={'placeholder' : 'bedroom','class': 'form-control'}),
             'bathroom' : NumberInput(attrs={'placeholder' : 'bathroom','class': 'form-control'}),

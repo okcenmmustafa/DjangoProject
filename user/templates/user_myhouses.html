@@ -1,6 +1,6 @@
 {% extends "homebase.html" %}
 
-{% block title %} İletisim Sayfası {% endblock %}
+{% block title %} İlanlarım {% endblock %}
 {% block keywords %} İletisim Sayfası anahtar kelimeler {% endblock %}
 {% block description %} İletisim Sayfası açıklama {% endblock %}
 
@@ -54,12 +54,13 @@
                     <a class="btn py-3 px-4 btn-primary" style="margin-left: 400px" href="/user/addhouse"> İlan Ver</a>
                     <h1>İlan verilen evler</h1>
                     <hr>
-                    <div class="container" style="overflow-x:auto;">
-                        <table class="table-borderless" width="600  ">
-                            <tr>
+                    <div class="container" >
+                        <table class="table-borderless" width="850px" style="font-size: 11px;font-family: Calibri;font-weight: bold">
+                            <tr style="font-weight: bolder;font-size: 20px">
                                 <th class="text-left">Fotoğraf</th>
                                 <th class="text-left">Başlık</th>
                                 <th class="text-left">Ev Tipi</th>
+                                <th class="text-left">Galeri</th>
                                 <th class="text-left">Fiyat</th>
                                 <th class="text-left">il</th>
                                 <th class="text-left">ilçe</th>
@@ -67,22 +68,28 @@
                                 <th class="text-left">Durum</th>
                             </tr>
                             {% for rs in myhouses %}
+
                                 <tr>
+
                                     <td class="text-left"><img src="{{ rs.image.url }}"
                                                                style="height: 100px;width: 100px"></td>
                                     <td class="text-left">{{ rs.title }}</td>
                                     <td class="text-left">{{ rs.category }}</td>
-                                    <td class="text-left">{{ rs.price|intcomma }}</td>
+                                    <td class="text-left"><a href="javascript:;" onclick="window.open('/user/houseaddimage/{{ rs.id }}','galeri','height=600,width=800,top=50,left=150')">Galeri</td>
+                                    <td class="text-left">{{ rs.price|intcomma }} ₺</td>
                                     <td class="text-left">{{ rs.get_city_display }}</td>
                                     <td class="text-left">{{ rs.district }}</td>
                                     <td class="text-left">{{ rs.create_at }}</td>
                                     <td class="text-left">{{ rs.status }}</td>
-                                    <td class="text-left"><a class="btn py-3 px-4 btn-primary"
+
+                                </tr>
+                                 <th >
+                                <td class="text-left"><a class="btn py-3 px-4 btn-primary"
                                                              href="/user/houseedit/{{ rs.id }}">Edit</a></td>
                                     <td class="text-left"><a onclick="return confirm('İlan silinecek! Emin misiniz ?')"
                                                              class="btn py-3 px-4 btn-primary" href="/user/housedelete/{{ rs.id }}">Delete</a>
                                     </td>
-                                </tr>
+                                </th>
                             {% endfor %}
                         </table>
                     </div>

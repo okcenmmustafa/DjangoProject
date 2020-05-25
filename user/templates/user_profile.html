@@ -1,6 +1,6 @@
 {% extends "homebase.html" %}
 
-{% block title %} İletisim Sayfası {% endblock %}
+{% block title %} Profil {% endblock %}
 {% block keywords %} İletisim Sayfası anahtar kelimeler {% endblock %}
 {% block description %} İletisim Sayfası açıklama {% endblock %}
 
@@ -48,6 +48,14 @@ td{
                     {% include 'user_panel.html' %}
                 </div>
                 <div class="col-md-10 p-4 p-md-5 order-md-last bg-light">
+
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}" rpşe="alert">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
                     <h1>User Information</h1>
                     <hr>
                     <table >

@@ -1,3 +1,4 @@
+
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
@@ -7,10 +8,11 @@ from django.http import HttpResponse , request , HttpResponseRedirect
 from django.shortcuts import render , redirect
 
 # Create your views here.
-from home.models import UserProfile
-from house.models import Category , House
+from home.models import UserProfile,Setting
+from house.models import Category , House , Comment , HouseImageForm , CImages
 from user.forms import UserUpdateForm , ProfileUpdateForm
 from content.models import Menu , HouseForm
+from django.shortcuts import get_object_or_404
 
 
 def index(request):
@@ -31,7 +33,7 @@ def user_update(request):
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
-            messages.success(request , 'Your account has been updated')
+            messages.success(request , 'Hesabınız Güncellendi.')
             return redirect('/user')
     else:
         category = Category.objects.all()
@@ -47,23 +49,41 @@ def user_update(request):
 
 
 def change_password(request):
+
     if request.method == 'POST':
         form = PasswordChangeForm(request.user , request.POST)
         if form.is_valid():
             user = form.save()
             update_session_auth_hash(request , user)
-            messages.success(request , 'Your password was succesfully updated !')
-            return redirect('change_password')
+            messages.success(request , 'Şifreniz Başarı ile değiştirildi !')
+            return HttpResponseRedirect('/user')
         else:
             messages.warning(request , 'Please correct the error below !')
             return HttpResponseRedirect('/user/password')
     else:
+        category=Category.objects.all()
         form = PasswordChangeForm(request.user)
-        return render(request , 'change_password.html' , {'form': form})
+        return render(request , 'change_password.html' , {'form': form,'category':category})
 
 
 def comments(request):
-    return HttpResponse('calisti')
+    category=Category.objects.all()
+    current_user=request.user
+    comments=Comment.objects.filter(user_id=current_user.id)
+    context={
+        'category':category,
+        'comments':comments,
+    }
+    return render(request,'user_comments.html',context)
+
+@login_required(login_url='/login')
+def deletecomment(request,id):
+    current_user=request.user
+    Comment.objects.filter(id=id,user_id=current_user).delete()
+    messages.success(request , 'Yorum başarıyla silindi !')
+    return HttpResponseRedirect('/user/comments')
+
+
 @login_required(login_url='/login')
 def addhouse(request):
     if request.method=='POST':
@@ -98,28 +118,82 @@ def addhouse(request):
     else:
         category=Category.objects.all()
         form=HouseForm()
+        setting = Setting.objects.get(pk=1)
         context={
+            'setting': setting,
             'category': category,
             'form':form,
         }
-        return render(request,'user_addhouse.html',context)
+    return render(request,'user_addhouse.html',context)
 
-def houseedit(request):
-    return HttpResponse("Hello")
 
-def housedelete(request):
-    return HttpResponse("Hello")
+@login_required(login_url='/login')
+def houseedit(request,id):
+    house= House.objects.get(id=id)
+    if request.method=="POST":
+        form= HouseForm(request.POST,request.FILES,instance=house)
+        if form.is_valid():
+            form.save()
+            messages.success(request,'Ev Güncellendi')
+            return HttpResponseRedirect('/user/myhouses')
+        else:
+            messages.warning(request,'Ev Form Hatasi : '+str(form.errors))
+            return HttpResponseRedirect('/user/houseedit/'+str(id))
+    else:
+        category = Category.objects.all()
+        form=HouseForm(instance=house)
+        context={
+            'house' : house,
+            'form' : form,
+            'category' : category,
 
+        }
+    return render(request,'user_addhouse.html',context)
+@login_required(login_url='/login')
+def housedelete(request,id):
+    current_user=request.user
+    House.objects.filter(id=id,userOwner_id=current_user).delete()
+    messages.success(request,"İlan Silindi!")
+    return HttpResponseRedirect('/user/myhouses')
 @login_required(login_url='/login')
 def myhouses(requset):
     category=Category.objects.all()
     menu = Menu.objects.all()
+    setting = Setting.objects.get(pk=1)
     current_user=requset.user
     myhouses=House.objects.filter(userOwner_id=current_user.id)
 
     context = {
+        'setting': setting,
         'category':category,
         'menu':menu,
         'myhouses':myhouses,
     }
     return render(requset,'user_myhouses.html',context)
+
+def houseaddimage(request,id):
+
+    if request.method=='POST':
+        lasturl=request.META.get('HTTP_REFERER')
+        form = HouseImageForm(request.POST,request.FILES)
+        if form.is_valid():
+            data=CImages()
+            data.title=form.cleaned_data['title']
+            data.house_id=id
+            data.image=form.cleaned_data['image']
+            data.save()
+            messages.success(request,'Fotograf basari ile yuklendi')
+            return HttpResponseRedirect(lasturl)
+        else:
+            messages.warning(request,'Form Error :'+str(form.errors))
+            return HttpResponseRedirect(lasturl)
+    else:
+        house=House.objects.get(id=id)
+        images=CImages.objects.filter(house_id=id)
+        form=HouseImageForm()
+        context = {
+            'house': house,
+            'images' : images,
+            'form' : form,
+        }
+        return render(request,'house_galeri.html',context)

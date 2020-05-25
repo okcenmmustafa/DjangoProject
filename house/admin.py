@@ -4,12 +4,13 @@ from django.contrib import admin
 from django.utils.html import format_html
 from mptt.admin import MPTTModelAdmin , DraggableMPTTAdmin
 
-from house.models import Category , House , Images , Comment
+from house.models import Category , House , Images , Comment,housefav
 
 
 class HouseImageInline(admin.TabularInline):
     model=Images
     extra=10
+    fields = ['title' , 'image']
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -21,9 +22,8 @@ class CommentAdmin(admin.ModelAdmin):
     list_filter=['status']
 
 
-
-
 class HouseAdmin(admin.ModelAdmin):
+
     list_display = ['title','category','price','image_tag','status']
     readonly_fields = ('image_tag',)
     list_filter = ['status']
@@ -77,3 +77,4 @@ admin.site.register(Category,CategoryAdmin)
 admin.site.register(Comment,CommentAdmin)
 admin.site.register(House,HouseAdmin)
 admin.site.register(Images,ImagesAdmin)
+

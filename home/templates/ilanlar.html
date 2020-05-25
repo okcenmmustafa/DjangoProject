@@ -1,6 +1,6 @@
 {% extends "homebase.html" %}
 
-{% block title %} {{ categorydata.title }} {% endblock %}
+{% block title %} İlanlar {% endblock %}
 {% block keywords %} {{ categorydata.keywords }} {% endblock %}
 {% block description %} {{ categorydata.description }} {% endblock %}
 
@@ -19,7 +19,11 @@
 
     <div class="col-lg-9">
 
-        <h5 class="mr-2"><a href="/category/{{ categorydata.slug }}/{{ categorydata.id }}">{{ categorydata.title }}</a>
+        <h5 class="mr-2"><a href="/ilanlar">İlanlar</a>
+            {% if categorydata.parent %}
+                       / <a href="/category/{{ categorydata.parent.slug }}/{{ categorydata.parent.id }}">{{ categorydata.parent.title }}</a>/
+            {% endif %}
+            /<a href="/category/{{ categorydata.slug }}/{{ categorydata.id }}">{{ categorydata.title }}</a>
         </h5>
         <div class="row">
 

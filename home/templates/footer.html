@@ -7,73 +7,46 @@
     <div class="row mb-5">
         <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-                <h2 class="ftco-heading-2">Hamlet.</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
-                    the blind texts.</p>
+
+                <p>Bize Ulaşmak için aşağıdaki bağlantıları Kullanabilirsiniz.</p>
                 <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                    <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                    <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                    <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    <li class="ftco-animate"><a href="https://twitter.com/caponsea"><span class="icon-twitter"></span></a></li>
+                    <li class="ftco-animate"><a href="https://www.linkedin.com/in/mmustafaokcen/?originalSubdomain=tr"><span class="icon-linkedin"></span></a></li>
+                    <li class="ftco-animate"><a href="https://www.instagram.com/mmustafaokcen/?hl=tr"><span class="icon-instagram"></span></a></li>
                 </ul>
             </div>
         </div>
-        <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-                <h2 class="ftco-heading-2">Company</h2>
+        <div class="col-8">
+             {% if request.user %}
+            <div class="ftco-footer-widget mb-5">
+            <h2 class="ftco-heading-2">KonutAL.</h2>
                 <ul class="list-unstyled">
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>FAQ</a></li>
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Reviews</a></li>
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Stories</a></li>
-                </ul>
+                    <p>www.konutAL.com web sitesi içeriği, yazılımı ve video ile içeriklerine dair marka, kullanım, telif ve sair her türlü fikri ve mali haklar Okcen Dijital Hizmetler Pazarlama ve Ticaret A.Ş.’ye ait olup; konutAL sitesinde kullanıcılar tarafından sağlanan her türlü ilan, bilgi, içerik ve görselin gerçekliği, orijinalliği, güvenliği ve doğruluğuna ilişkin sorumluluk münhasıran bu içerikleri giren kullanıcıya aittir, Okcen Dijital Hizmetler Pazarlama ve Ticaret A.Ş. sorumlu tutulamaz.</p></ul>
             </div>
+            {% endif %}
         </div>
-        <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-                <h2 class="ftco-heading-2">Explore</h2>
+        <div class="col-2">
+            <div class="ftco-footer-widget mb-2 ml-md-2">
+                <h2 class="ftco-heading-2">Menü</h2>
                 <ul class="list-unstyled">
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Privacy</a></li>
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Policy</a></li>
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Terms</a></li>
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Review</a></li>
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Features</a></li>
+                    <li><a href="/"><span class="icon-long-arrow-right mr-2"></span>Anasayfa</a></li>
+                    <li><a href="/ilanlar"><span class="icon-long-arrow-right mr-2"></span>İlanlar</a></li>
+                    <li><a href="/iletisim"><span class="icon-long-arrow-right mr-2"></span>İletişim</a></li>
+                    <li><a href="/hakkimizda"><span class="icon-long-arrow-right mr-2"></span>Hakkımızda</a></li>
+                    <li><a href="/sss"><span class="icon-long-arrow-right mr-2"></span>SSS</a></li>
+
                 </ul>
             </div>
         </div>
-        <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-                <h2 class="ftco-heading-2">Get Started</h2>
-                <ul class="list-unstyled">
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Buy</a></li>
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Rent</a></li>
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Payment</a></li>
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Mortgage</a></li>
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Loan</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-                <h2 class="ftco-heading-2">Newsletter</h2>
-                <p>Far far away, behind the word mountains, far from the countries.</p>
-                <form action="#" class="subscribe-form">
-                    <div class="form-group">
-                        <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
-                        <input type="submit" value="Subscribe" class="form-control submit px-3">
-                    </div>
-                </form>
-            </div>
-        </div>
+
+
     </div>
     <div class="row">
         <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a
-                        href="https://colorlib.com" target="_blank">Colorlib</a>
+                All rights reserved | This website is made with  by Mücahit Mustafa Ökçen
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
         </div>
     </div>

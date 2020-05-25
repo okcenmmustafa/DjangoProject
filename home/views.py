@@ -1,26 +1,27 @@
 import json
 from random import random
 
+
 from django.contrib import messages
 from django.contrib.auth import logout , authenticate , login
 
 from django.db.models import QuerySet
 from django.http import HttpResponse , HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render , get_object_or_404
 
 # Create your views here.
 from django.template import context
 
 import house
 from home.forms import SearchForm , SignUpForm , SearchForm2
-from home.models import Setting , ContactFormu , ContactFormMessage , UserProfile
+from home.models import Setting , ContactFormu , ContactFormMessage , UserProfile , FAQ
 
 from house.models import House , Category , Images , Comment
 
 
 def index(request):
     setting = Setting.objects.get(pk=1)
-    sliderdata = House.objects.all()[:4]
+    sliderdata = House.objects.order_by('?').all()[:4]
     category = Category.objects.all()
     yeniEklenenler = House.objects.all().order_by('-id')[:4]
 
@@ -36,15 +37,22 @@ def index(request):
 
 
 def hakkimizda(request):
+    category = Category.objects.all()
     setting = Setting.objects.get(pk=1)
-    context = {'setting': setting , 'page': 'hakkimizda'}
+    context = {'category':category,
+        'setting': setting ,
+        'page': 'hakkimizda'}
     return render(request , "hakkimizda.html" , context)
 
 
 def ilanlar(request):
     category = Category.objects.all()
     houses = House.objects.all()
-    context = {'category': category ,
+    setting = Setting.objects.get(pk=1)
+
+    context = {
+        'setting': setting ,
+        'category': category ,
                'houses': houses}
     return render(request , "ilanlar.html" , context)
 
@@ -65,6 +73,8 @@ def category_ilanlar(request , id , slug):
 
 def iletisim(request):
     form = ContactFormu()
+    category = Category.objects.all()
+
     if request.method == 'POST':
         form = ContactFormu(request.POST)
         if form.is_valid():
@@ -80,7 +90,8 @@ def iletisim(request):
 
     setting = Setting.objects.get(pk=1)
     form = ContactFormu()
-    context = {'setting': setting , 'form': form}
+    context = {'category': category ,
+    'setting': setting , 'form': form}
     return render(request , 'iletisim.html' , context)
 
 
@@ -89,8 +100,11 @@ def UrunSayfasi(request , id , slug):
     house = House.objects.get(pk=id)
     comments=Comment.objects.filter(house_id=id,status=True)
     images = Images.objects.filter(house_id=id)
+    setting = Setting.objects.get(pk=1)
+    is_favorite=False
     context = {'category': category ,
                'comments' :comments,
+               'setting' :setting,
                'house': house ,
                'images': images ,
                }
@@ -1422,3 +1436,15 @@ def house_search2(request):
         'category': category
     }
     return render(request , "ilanlar.html" , context)
+
+def faq(request):
+    setting = Setting.objects.get(pk=1)
+
+    category= Category.objects.all()
+    faq=FAQ.objects.all().order_by('-ordernumber')
+    context={
+        'setting' : setting,
+        'category':category,
+        'faq': faq,
+    }
+    return render(request,'faq.html',context)

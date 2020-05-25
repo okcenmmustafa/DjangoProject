@@ -1,0 +1,126 @@
+{% extends "homebase.html" %}
+
+{% block title %} Yorumlarım {% endblock %}
+{% block keywords %} İletisim Sayfası anahtar kelimeler {% endblock %}
+{% block description %} İletisim Sayfası açıklama {% endblock %}
+
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
+{% endblock %}
+
+{% block baslik %}
+    {% include "baslik.html" %}
+    {% block link %} iletisim {% endblock %}
+{% endblock %}
+
+{% block body %}
+    {% load static %}
+    {% load humanize %}
+    <style>
+        th {
+            padding: 5px;
+
+            text-align: center;
+        }
+
+        td {
+
+            text-align: left;
+
+            padding: 5px;
+        }
+
+        .button {
+            background-color: limegreen;
+            color: white;
+            font-size: 14px;
+            padding: 14px 40px;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+        }
+
+        .button:hover {
+            background-color: black; /* Green */
+            color: white;
+        }
+    </style>
+    <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
+        <div class="container">
+            <div class="row d-flex align-items-stretch no-gutters">
+                <div class="col-md-2 p-4 p-md-5 order-md-last bg-light">
+                    {% include 'user_panel.html' %}
+                </div>
+                <div class="col-md-10 p-4 p-md-5 order-md-last bg-light">
+
+                    <h1>Yorumlar</h1>
+                    <hr>
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}" rpşe="alert">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    <div class="container">
+                        <table class="table-borderless" width="850px"
+                               style="font-size: 11px;font-family: Calibri;font-weight: bold">
+                            <tr style="font-weight: bolder;font-size: 20px">
+                                <th class="text-left">Fotoğraf</th>
+                                <th class="text-left">İlan</th>
+                                <th class="text-left">Puan</th>
+                                <th class="text-left">Konu</th>
+                                <th class="text-left">Yorum</th>
+                                <th class="text-left">Durum</th>
+                                <th class="text-left">Yorum Tarihi</th>
+
+                            </tr>
+                            {% for rs in comments %}
+
+                                <tr>
+
+                                    <td class="text-left"><img src="{{ rs.house.image.url }}"
+                                                               style="height: 100px;width: 100px"></td>
+
+
+                                    <td class="text-left">{{ rs.house.title }} ₺</td>
+                                    <td class="text-left">{% if rs.rate == 1 %}
+                                        <i class="icon-star"></i><i class="icon-star-0"></i><i class="icon-star-o"></i>
+                                        <i class="icon-star-o"></i><i class="icon-star-o"></i> </p>
+                                    {% elif rs.rate == 2 %}
+                                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i>
+                                        <i class="icon-star-o"></i><i class="icon-star-o"></i></p>
+                                    {% elif  rs.rate == 3 %}
+                                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i>
+                                        <i class="icon-star-o"></i><i class="icon-star-o"></i></p>
+                                    {% elif  rs.rate == 4 %}
+                                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i>
+                                        <i class="icon-star"></i><i class="icon-star-o"></i></p>
+                                    {% elif  rs.rate == 5 %}
+                                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i>
+                                        <i class="icon-star"></i><i class="icon-star"></i> </p>
+                                    {% endif %}</td>
+                                    <td class="text-left">{{ rs.subject }}</td>
+                                    <td class="text-left">{{ rs.comment }}</td>
+                                    <td class="text-left">{{ rs.status }}</td>
+                                    <td class="text-left">{{ rs.create_at }}</td>
+
+                                </tr>
+                                <th>
+
+                                <td class="text-left"><a onclick="return confirm('Yorum silinecek! Emin misiniz ?')"
+                                                         class="btn py-3 px-4 btn-primary"
+                                                         href="/user/deletecomment/{{ rs.id }}">Delete</a>
+                                </td>
+                                </th>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <6*
+
+    </section>
+
+{% endblock %}

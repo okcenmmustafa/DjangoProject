@@ -2,51 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24289d0d-142c-4a21-9b2b-fb07fa858063" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/content/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user_addhouse.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user_myhouses.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Lesson1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FinalProjesi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/faq.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/house_galeri.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson1/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson1/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/content/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/hakkimizda.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/hakkimizda.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/homeSearch.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/ilanlar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/ilanlar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/iletisim.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/iletisim.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/singleEvDetay.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/singleEvDetay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/house/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/migrations/0002_house.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0002_house.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/migrations/0003_saleorrent.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0003_saleorrent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/migrations/0004_auto_20200329_2212.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0004_auto_20200329_2212.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/migrations/0005_auto_20200329_2240.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0005_auto_20200329_2240.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/migrations/0006_auto_20200330_1854.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0006_auto_20200330_1854.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/migrations/0007_auto_20200505_0408.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0007_auto_20200505_0408.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/migrations/0008_house_slug.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0008_house_slug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/migrations/0009_auto_20200505_2118.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/migrations/0009_auto_20200505_2118.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/house/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/house/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/images/1.1-min.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/images/img_7567_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/images/img_7567_0_EIcdnU0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/images/unnamed_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/images/unnamed_1_qvEGz0s.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_addhouse.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_addhouse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_myhouses.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_myhouses.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,13 +61,6 @@
         <item name="Django default2" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default2" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="house_house: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -131,9 +106,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Django\Lesson1\user\templates" />
+      <recent name="C:\Django\Lesson1\home\templates" />
       <recent name="C:\Django\Lesson1\content" />
       <recent name="C:\Django\Lesson1\user" />
-      <recent name="C:\Django\Lesson1\home\templates" />
       <recent name="C:\Django\Lesson1\house" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -321,6 +296,9 @@
       <workItem from="1589587398307" duration="9418000" />
       <workItem from="1589638070916" duration="14216000" />
       <workItem from="1589666420470" duration="31015000" />
+      <workItem from="1590321262912" duration="24283000" />
+      <workItem from="1590363284406" duration="7172000" />
+      <workItem from="1590404371737" duration="21798000" />
     </task>
     <task id="LOCAL-00001" summary="Üye giriş ve kayıt saflarının eklenmesi">
       <created>1589299857888</created>
@@ -364,9 +342,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="539" y="179" width="1092" height="782" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589524815192" />
-    <state x="565" y="166" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585582712892">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="452" y="117" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590337136183">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="452" y="117" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1590337136183" />
     <state x="565" y="166" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1585582712892" />
     <state x="408" y="0" key="CommitChangelistDialog2" timestamp="1589432681217">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -428,10 +407,15 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589489071983" />
-    <state x="219" y="275" key="com.intellij.ide.util.TipDialog" timestamp="1589666420667">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="175" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1590404375776">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="175" y="220" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1590404375776" />
     <state x="219" y="275" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589666420667" />
+    <state x="285" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590446135574">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="285" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.864@0.0.1536.864" timestamp="1590446135574" />
     <state x="678" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589300685521">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -444,9 +428,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="425" y="132" width="1050" height="795" key="recent.locations.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1589300716436" />
-    <state x="453" y="-2" width="1009" height="1470" key="search.everywhere.popup" timestamp="1589556814706">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="362" y="-2" width="1009" height="1176" key="search.everywhere.popup" timestamp="1590335956830">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="362" y="-2" width="1009" height="1176" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1590335956830" />
     <state x="453" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1589556814706" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

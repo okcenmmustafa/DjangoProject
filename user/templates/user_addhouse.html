@@ -1,16 +1,19 @@
 {% extends "homebase.html" %}
 
-{% block title %} İletisim Sayfası {% endblock %}
+    {% block title %} {% if house %}İlan Düzenle
+    {% else %}Yeni İlan {% endif %}
+    {% endblock %}
+
 {% block keywords %} İletisim Sayfası anahtar kelimeler {% endblock %}
 {% block description %} İletisim Sayfası açıklama {% endblock %}
 
 {% block head %}
     <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
-    
-{% load static %}
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
-<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+
+    {% load static %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
 {% endblock %}
 
 {% block baslik %}
@@ -52,8 +55,21 @@
         <div class="container">
             <div class="row d-flex align-items-stretch no-gutters">
 
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}" rpşe="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
                 <div class="col-md-12 p-4 p-md-5 order-md-last bg-light">
-                     <h3 style="padding: 100px;padding-left: 400px">Yeni İlan Ekleme</h3>
+                    {% if house %}
+                    <h3 style="padding: 100px;padding-left: 430px">İlan Düzenle</h3>
+
+                    <img class="icon-adjust" height="300px" width="250px" style="margin:30px 390px" src="{{ house.image.url }}">
+                    {% else %}
+                        <h3 style="padding: 100px;padding-left: 430px">Yeni İlan</h3>
+                    {% endif %}
                     {% load static %}
                     <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
@@ -66,8 +82,8 @@
                         </div>
                     </form>
 
+                </div>
             </div>
-        </div>
 
 
     </section>

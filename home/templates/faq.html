@@ -1,0 +1,53 @@
+{% extends "homebase.html" %}
+
+{% block title %}Sıkça Sorulan Sorular {% endblock %}
+{% block keywords %} Sıkça Sorulan Sorular anahtar kelimeler {% endblock %}
+{% block description %} Sıkça Sorulan <Sorular></Sorular> açıklama {% endblock %}
+
+{% block head %}
+        <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
+{% endblock %}
+
+{% block baslik %}
+    {% include "baslik.html" %}
+    {% block link %} iletisim {% endblock %}
+{% endblock %}
+
+{% block body %}
+    {% load static %}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{% static 'images/bg_4.jpg' %}');"
+             data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <h1 class="mb-2 bread">Sıkça Sorulan Sorular</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="/">KonutAL <i class="ion-ios-arrow-forward"></i></a></span>
+                        <span class="mr-2"></span> <span>Sıkça Sorulan Sorular<i class="ion-ios-arrow-forward"></i></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section contact-section">
+        <div class="container">
+
+            <div id="accordion">
+              {% for rs in faq %}
+            <h3>{{ rs.question }}</h3>
+            <div>
+                <p>
+                   {{ rs.answer|safe }}
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+    </section>
+
+{% endblock %}

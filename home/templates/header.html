@@ -6,6 +6,142 @@
             <span class="oi oi-menu"></span> Menu
         </button>
         <style>
+             li {
+        list-style-type: none;
+    }
+
+    .responsive-menu {
+
+
+        font-size: 120%;
+    }
+
+    .responsive-menu ul li ul li {
+
+        border-bottom: solid 1px white;
+        border-top: solid 1px white;
+    }
+
+    .responsive-menu ul li ul {
+         text-align: center;
+        padding-right: 150px;
+        display: none;
+        font-size: 80%;
+
+    }
+
+    #trigger:checked + .responsive-menu ul li ul {
+        display: block;
+    }
+
+    #trigger {
+        display: none;
+    }
+
+    #trigger12 {
+        display: none;
+    }
+
+
+    #trigger12:checked + .responsive-menu ul li ul {
+        display: block;
+    }
+
+    .responsive-menu12 {
+
+        padding: 10px;
+        font-size: 200%;
+    }
+
+    .responsive-menu12 ul li ul li {
+        padding: 10px;
+
+    }
+
+    .responsive-menu12 ul li ul {
+        display: none;
+        font-size: 60%;
+        padding-top: 30px;
+    }
+
+    #trigger11 {
+        display: none;
+    }
+
+
+    #trigger11:checked + .responsive-menu ul li ul {
+        display: block;
+    }
+
+    .responsive-menu11 {
+
+        padding: 10px;
+        font-size: 200%;
+    }
+
+    .responsive-menu11 ul li ul li {
+        padding: 10px;
+
+    }
+
+    .responsive-menu11 ul li ul {
+        display: none;
+        font-size: 60%;
+        padding-top: 30px;
+    }
+
+    #trigger13 {
+        display: none;
+    }
+
+
+    #trigger13:checked + .responsive-menu ul li ul {
+        display: block;
+    }
+
+    .responsive-menu13 {
+
+        padding: 10px;
+        font-size: 200%;
+    }
+
+    .responsive-menu13 ul li ul li {
+        padding: 10px;
+
+    }
+
+    .responsive-menu13 ul li ul {
+        display: none;
+        font-size: 60%;
+        padding-top: 30px;
+    }
+
+    #trigger14 {
+        display: none;
+    }
+
+
+    #trigger14:checked + .responsive-menu ul li ul {
+        display: block;
+    }
+
+    .responsive-menu14 {
+
+        padding: 10px;
+        font-size: 200%;
+    }
+
+    .responsive-menu14 ul li ul li {
+        padding: 10px;
+
+    }
+
+    .responsive-menu14 ul li ul {
+        display: none;
+        font-size: 60%;
+        padding-top: 30px;
+    }
+
             .dropbtn {
                 background-color: #4CAF50;
                 color: white;
@@ -50,16 +186,55 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="/" class="nav-link">Anasayfa</a></li>
-                <li class="nav-item"><a href="/ilanlar" class="nav-link">İlanlar</a></li>
+            <li class="dropdown" style="margin: auto;margin-right: 29px;margin-bottom:20px" >
+
+                <ul class="nav-item" ><a href="/ilanlar" class="nav-link">İlanlar</a>
+                  <div class="dropdown-content" style="width:200px;size: auto;background-color:rgba(224,241,255,0.90)" >
+                            {% load mptt_tags %}
+
+                    {% recursetree category %}
+                           <li style="color:black">
+                            {% if node.is_leaf_node %}
+                        <a style="width: 100px;" href="/category/{{ node.slug }}/{{ node.id }}">
+
+                            {{ node.title }}
+                           {% endif %}
+                            {% if not node.is_leaf_node %}
+                                <input type="checkbox" id="trigger1{{ node.listeleme }}">
+                                <div class="responsive-menu">
+                                    <ul>
+                                        <li>
+                                            <label for="trigger1{{ node.listeleme }}">{{ node.title }} </label>
+
+                                                    <ul>
+
+                                                              {{ children }}
+
+
+                                                    </ul>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            {% endif %}
+                               </a>
+ </li>
+                    {% endrecursetree %}
+                        </div>
+
+                </ul>
+  </li>
                 <li class="nav-item"><a href="/iletisim" class="nav-link">İletişim</a></li>
                 <li class="nav-item"><a href="/hakkimizda" class="nav-link">Hakkımızda</a></li>
+                <li class="nav-item"><a href="/sss" class="nav-link">Sıkça Sorulan Sorular</a></li>
 
                 {% if user.id is  not None %}
                     <div class="dropdown" style="margin:auto">
                     <img class="icon-adjust" style="border-radius: 20px" height="70px" width="70px" src="{{ user.userprofile.image.url }}">
-                        <div class="btn py-3 px-4 btn-primary" style="size: auto">{{ user.first_name }} {{ user.last_name }}</div>
+                        <div class="btn py-3 px-4 btn-primary" style="size: auto"><a href="/user">{{ user.first_name }} {{ user.last_name }}</a></div>
                         <div class="dropdown-content">
-                            <a href="/user/favorites">Favoriler</a>
                             <a href="/user/myhouses">İlanlarım</a>
                             <a href="/user/comments">Yorumlar</a>
                             <a href="/user">Hesap Ayarları</a>

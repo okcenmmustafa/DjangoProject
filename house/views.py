@@ -4,6 +4,7 @@ from django.http import HttpResponse , HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
+
 from house.models import CommentForm , Comment
 def index(request):
     HttpResponseRedirect("")
