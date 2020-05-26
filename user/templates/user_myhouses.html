@@ -60,7 +60,6 @@
                                 <th class="text-left">Fotoğraf</th>
                                 <th class="text-left">Başlık</th>
                                 <th class="text-left">Ev Tipi</th>
-                                <th class="text-left">Galeri</th>
                                 <th class="text-left">Fiyat</th>
                                 <th class="text-left">il</th>
                                 <th class="text-left">ilçe</th>
@@ -75,7 +74,6 @@
                                                                style="height: 100px;width: 100px"></td>
                                     <td class="text-left">{{ rs.title }}</td>
                                     <td class="text-left">{{ rs.category }}</td>
-                                    <td class="text-left"><a href="javascript:;" onclick="window.open('/user/houseaddimage/{{ rs.id }}','galeri','height=600,width=800,top=50,left=150')">Galeri</td>
                                     <td class="text-left">{{ rs.price|intcomma }} ₺</td>
                                     <td class="text-left">{{ rs.get_city_display }}</td>
                                     <td class="text-left">{{ rs.district }}</td>
@@ -83,11 +81,13 @@
                                     <td class="text-left">{{ rs.status }}</td>
 
                                 </tr>
-                                 <th >
+                                 <th>
                                 <td class="text-left"><a class="btn py-3 px-4 btn-primary"
                                                              href="/user/houseedit/{{ rs.id }}">Edit</a></td>
+                                 <td class="text-left"><a class="btn py-3 px-4 btn-primary" style="margin-right: 20px;background-color: rgba(165,212,255,0.6)"
+                                                          href="javascript:;" onclick="window.open('/user/houseaddimage/{{ rs.id }}','galeri','height=800,width=1000,top=50,left=150')">Resimler</a></td>
                                     <td class="text-left"><a onclick="return confirm('İlan silinecek! Emin misiniz ?')"
-                                                             class="btn py-3 px-4 btn-primary" href="/user/housedelete/{{ rs.id }}">Delete</a>
+                                                             class="btn py-3 px-4 btn-primary" style="background-color: rgba(255,65,64,0.69)" href="/user/housedelete/{{ rs.id }}">Delete</a>
                                     </td>
                                 </th>
                             {% endfor %}

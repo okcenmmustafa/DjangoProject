@@ -222,6 +222,10 @@ class Images(models.Model):
         return mark_safe('<img src="{}" height=50"/>'.format(self.image.url))
         image_tag.short_description = 'Image'
 
+class HouseImageForm(ModelForm):
+    class Meta:
+        model = Images
+        fields = ['title','image']
 
 
 
@@ -260,8 +264,3 @@ class CImages(models.Model):
     def image_tag(self):
         return mark_safe('<img src"{}" height="50"/>'.format(self.image.url))
     image_tag.short_description='Image'
-
-class HouseImageForm(ModelForm):
-    class Meta:
-        model = CImages
-        fields = ['title','image']

@@ -13,6 +13,7 @@ urlpatterns = [
     path('myhouses/',views.myhouses,name='myhouses'),
     path('houseedit/<int:id>',views.houseedit,name='houseedit'),
     path('housedelete/<int:id>',views.housedelete,name='housedelete'),
+    path('fotodelete/<int:id1>/<int:id2>',views.fotodelete,name='fotodelete'),
     path('houseaddimage/<int:id>',views.houseaddimage,name='houseaddimage'),
 
 

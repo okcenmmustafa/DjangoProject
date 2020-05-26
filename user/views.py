@@ -9,7 +9,7 @@ from django.shortcuts import render , redirect
 
 # Create your views here.
 from home.models import UserProfile,Setting
-from house.models import Category , House , Comment , HouseImageForm , CImages
+from house.models import Category , House , Comment , HouseImageForm , CImages , Images
 from user.forms import UserUpdateForm , ProfileUpdateForm
 from content.models import Menu , HouseForm
 from django.shortcuts import get_object_or_404
@@ -177,7 +177,7 @@ def houseaddimage(request,id):
         lasturl=request.META.get('HTTP_REFERER')
         form = HouseImageForm(request.POST,request.FILES)
         if form.is_valid():
-            data=CImages()
+            data=Images()
             data.title=form.cleaned_data['title']
             data.house_id=id
             data.image=form.cleaned_data['image']
@@ -189,11 +189,18 @@ def houseaddimage(request,id):
             return HttpResponseRedirect(lasturl)
     else:
         house=House.objects.get(id=id)
-        images=CImages.objects.filter(house_id=id)
+        images=Images.objects.filter(house_id=id)
         form=HouseImageForm()
         context = {
             'house': house,
             'images' : images,
             'form' : form,
         }
-        return render(request,'house_galeri.html',context)
+        return render(request , 'house_fotolar.html' , context)
+@login_required(login_url='/login')
+def fotodelete(request,id1,id2):
+    lasturl = request.META.get('HTTP_REFERER')
+    current_user=request.user
+    Images.objects.filter(id=id1,house_id=id2).delete()
+    messages.success(request,"İlan Silindi!")
+    return HttpResponseRedirect(lasturl)

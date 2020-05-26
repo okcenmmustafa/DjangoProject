@@ -2,31 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24289d0d-142c-4a21-9b2b-fb07fa858063" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/templates/faq.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/house_galeri.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson1/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/content/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/ilanlar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/ilanlar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/singleEvDetay.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/singleEvDetay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/house/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/house/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/house/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_addhouse.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_addhouse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/house_galeri.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/house_fotolar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/templates/user_myhouses.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_myhouses.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
@@ -298,7 +280,7 @@
       <workItem from="1589666420470" duration="31015000" />
       <workItem from="1590321262912" duration="24283000" />
       <workItem from="1590363284406" duration="7172000" />
-      <workItem from="1590404371737" duration="21798000" />
+      <workItem from="1590404371737" duration="26512000" />
     </task>
     <task id="LOCAL-00001" summary="Üye giriş ve kayıt saflarının eklenmesi">
       <created>1589299857888</created>
